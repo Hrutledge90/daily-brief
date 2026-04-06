@@ -15,12 +15,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .mh-live{display:inline-block;margin-top:3px;font-size:9px;background:#e74c3c;color:#fff;padding:2px 7px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
 .mh-btn{padding:5px 12px;font-size:11px;border:1px solid rgba(255,255,255,0.25);border-radius:20px;background:transparent;color:rgba(255,255,255,0.75);cursor:pointer;transition:all 0.15s}
 .mh-btn:hover{background:rgba(255,255,255,0.15);color:#fff}
-.sync-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
-.sync-ok{background:#2ecc71}.sync-err{background:#e74c3c}.sync-ing{background:#f39c12;animation:pulse 1s infinite}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
 .nav{display:flex;background:#1a1a1a;overflow-x:auto}
 .nav::-webkit-scrollbar{display:none}
-.ntab{padding:12px 18px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:all 0.18s}
+.ntab{padding:12px 16px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:all 0.18s}
 .ntab.on{color:#fff;border-bottom:2px solid #fff}
 .ntab:hover:not(.on){color:rgba(255,255,255,0.7)}
 .panel{display:none}.panel.on{display:block}
@@ -44,60 +41,67 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .onboard-divider::before,.onboard-divider::after{content:'';flex:1;height:0.5px;background:#eee}
 .onboard-skip{font-size:12px;color:#9b59b6;cursor:pointer;text-decoration:underline}
  
-/* sync banner */
-.sync-banner{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:#f0fdf4;border-bottom:0.5px solid #bbf7d0;font-size:11px;color:#166534}
+.sync-banner{display:flex;align-items:center;padding:8px 16px;font-size:11px;color:#166534;background:#f0fdf4;border-bottom:0.5px solid #bbf7d0}
 .sync-banner.error{background:#fef2f2;border-color:#fecaca;color:#991b1b}
 .sync-banner.syncing{background:#faf8ff;border-color:#ede8ff;color:#5b3fa6}
  
-.taste-bar{padding:10px 16px;background:#faf8ff;border-bottom:0.5px solid #ede8ff;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.taste-bar{padding:9px 16px;background:#faf8ff;border-bottom:0.5px solid #ede8ff;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .taste-label{font-size:10px;font-weight:700;color:#7c5cbf;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap}
 .taste-tags{display:flex;gap:5px;flex-wrap:wrap;flex:1}
 .taste-tag{font-size:10px;padding:2px 9px;border-radius:20px;background:#ede8ff;color:#5b3fa6;font-weight:600}
 .taste-count{font-size:10px;color:#9b8abf;white-space:nowrap}
  
-.section-hero{position:relative;height:150px;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
+.section-hero{position:relative;height:140px;overflow:hidden;display:flex;align-items:flex-end;padding:16px}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45}
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88),rgba(0,0,0,0.1))}
 .hero-text{position:relative;z-index:1}
-.hero-kicker{display:inline-block;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
-.hero-title{font-size:17px;font-weight:700;color:#fff;font-family:Georgia,serif}
-.hero-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:3px}
-.feed-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:12px 16px 8px;border-bottom:0.5px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between}
+.hero-kicker{display:inline-block;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.hero-title{font-size:16px;font-weight:700;color:#fff;font-family:Georgia,serif}
+.hero-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:2px}
+.feed-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:11px 16px 8px;border-bottom:0.5px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between}
 .for-you-badge{font-size:9px;padding:2px 8px;border-radius:10px;background:#ede8ff;color:#5b3fa6;font-weight:700}
+ 
 .loading-row{padding:28px 16px;text-align:center;font-size:13px;color:#bbb}
 .spinner{width:22px;height:22px;border:2px solid #eee;border-top-color:#9b59b6;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 10px}
 @keyframes spin{to{transform:rotate(360deg)}}
 .error-box{padding:24px 16px;text-align:center;font-size:13px;color:#999;line-height:1.8}
 .retry-btn{margin-top:10px;display:inline-block;padding:6px 16px;font-size:12px;border:0.5px solid #ddd;border-radius:8px;cursor:pointer;background:#fff;color:#444}
-.art-item{display:flex;border-bottom:0.5px solid #f0f0f0;transition:background 0.15s;text-decoration:none;color:inherit;position:relative}
+ 
+/* article cards */
+.art-item{display:flex;flex-direction:column;border-bottom:0.5px solid #f0f0f0;text-decoration:none;color:inherit;position:relative;background:#fff;transition:background 0.15s}
 .art-item:hover{background:#fafafa}
 .art-item:last-child{border-bottom:none}
-.art-item.lead{flex-direction:column}
-.for-you-strip{position:absolute;top:0;left:0;right:0;height:2px;background:#a78bfa}
-.lead-img{width:100%;height:200px;object-fit:cover;display:block;background:#f5f5f5}
-.lead-body{padding:14px 16px}
-.art-thumb{width:88px;height:70px;object-fit:cover;flex-shrink:0;background:#f5f5f5}
-.art-body{padding:11px 13px;flex:1;min-width:0}
-.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.art-item.lead .art-img-wrap{height:200px}
+.art-img-wrap{width:100%;height:160px;overflow:hidden;position:relative}
+.art-img{width:100%;height:100%;object-fit:cover;display:block;background:#f5f5f5}
+.art-img-overlay{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
+.art-body{padding:13px 16px}
+.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:6px}
 .k-good{color:#1a9e55}.k-bad{color:#c0392b}.k-neutral{color:#7c5cbf}
 .match-pill{font-size:8px;padding:1px 6px;border-radius:8px;background:#ede8ff;color:#5b3fa6;font-weight:700}
-.art-hl{font-size:14px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:5px}
-.art-hl-sm{font-size:13px;font-weight:600;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:3px}
-.art-sum{font-size:12px;color:#666;line-height:1.6;margin-bottom:6px}
-.art-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px}
+.art-hl{font-size:15px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:8px}
+.art-summary{font-size:13px;color:#444;line-height:1.7;margin-bottom:10px}
+.art-summary p{margin-bottom:6px}
+.art-summary p:last-child{margin-bottom:0}
+.art-summary.loading-sum{color:#bbb;font-style:italic;font-size:12px}
+.art-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;padding-top:8px;border-top:0.5px solid #f5f5f5}
 .art-src{font-size:11px;color:#bbb}
-.act-row{display:flex;gap:4px}
-.act-btn{width:28px;height:28px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;color:#ccc;transition:all 0.18s}
-.act-btn:hover{background:#f5f5f5;color:#999;transform:scale(1.1)}
+.act-row{display:flex;gap:5px}
+.act-btn{width:30px;height:30px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#ccc;transition:all 0.18s}
+.act-btn:hover{background:#f5f5f5;transform:scale(1.1)}
 .act-btn.fav-on{background:#fff0f3;border-color:#d63a6a;color:#d63a6a;transform:scale(1.15)}
 .act-btn.nope-on{background:#f5f5f5;color:#ddd}
-.sb-good{border-left:3px solid #2ecc71}
-.sb-bad{border-left:3px solid #e74c3c}
-.sb-neutral{border-left:3px solid #ddd}
+.sb-good{border-top:3px solid #2ecc71}
+.sb-bad{border-top:3px solid #e74c3c}
+.sb-neutral{border-top:3px solid #ddd}
+.for-you-strip{position:absolute;top:0;left:0;right:0;height:3px;background:#a78bfa;z-index:2}
+.read-more{display:inline-block;margin-top:4px;font-size:11px;color:#9b59b6;font-weight:600;text-decoration:none}
+.read-more:hover{text-decoration:underline}
  
+/* profile */
 .profile-wrap{padding:16px}
 .profile-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:4px}
-.profile-sub{font-size:12px;color:#bbb;margin-bottom:18px}
+.profile-sub{font-size:12px;color:#bbb;margin-bottom:16px}
 .sync-status-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f8f8f8;border-radius:10px;margin-bottom:16px}
 .sync-status-text{font-size:12px;color:#555}
 .kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
@@ -128,30 +132,33 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .st-good{background:#eafaf1;color:#1a9e55}
 .st-bad{background:#fdeaea;color:#c0392b}
 .st-neutral{background:#f5f0ff;color:#7c5cbf}
+ 
 .week-wrap{padding:16px}
 .week-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:2px}
 .week-sub{font-size:12px;color:#bbb;margin-bottom:14px}
-.week-item{display:flex;gap:12px;padding:11px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;text-decoration:none;color:inherit}
+.week-item{display:flex;gap:12px;padding:12px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;text-decoration:none;color:inherit}
 .week-item:last-child{border-bottom:none}
 .week-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
 .wdg{background:#2ecc71}.wdb{background:#e74c3c}.wdn{background:#9b59b6}
 .week-hl{font-size:13px;color:#111;line-height:1.45;font-weight:600}
-.week-meta{font-size:10px;color:#bbb;margin-top:2px;text-transform:uppercase;letter-spacing:0.8px}
-.sunday-hero{position:relative;min-height:200px;display:flex;align-items:flex-end;padding:22px;overflow:hidden;background:#1a0a2e}
+.week-sum{font-size:12px;color:#666;line-height:1.6;margin-top:4px}
+.week-meta{font-size:10px;color:#bbb;margin-top:3px;text-transform:uppercase;letter-spacing:0.8px}
+ 
+.sunday-hero{position:relative;min-height:180px;display:flex;align-items:flex-end;padding:20px;overflow:hidden;background:#1a0a2e}
 .sunday-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3}
 .sunday-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,0,40,0.93),rgba(15,0,40,0.15))}
 .sunday-content{position:relative;z-index:1;width:100%}
 .sunday-pill{display:inline-block;padding:3px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;background:rgba(167,139,250,0.25);color:#c4b5fd;margin-bottom:9px;border:1px solid rgba(167,139,250,0.35)}
-.sunday-hl{font-size:20px;font-weight:700;color:#fff;line-height:1.25;font-family:Georgia,serif}
-.sunday-body{padding:18px 16px}
-.sunday-intro{font-size:14px;color:#444;line-height:1.8;font-family:Georgia,serif;margin-bottom:16px;padding-bottom:14px;border-bottom:0.5px solid #f0f0f0}
-.sunday-read-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#888;background:#f8f8f8;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.sunday-hl{font-size:19px;font-weight:700;color:#fff;line-height:1.25;font-family:Georgia,serif}
+.sunday-body{padding:16px}
+.sunday-intro{font-size:14px;color:#444;line-height:1.8;font-family:Georgia,serif;margin-bottom:14px;padding-bottom:12px;border-bottom:0.5px solid #f0f0f0}
+.sunday-read-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#888;background:#f8f8f8;padding:4px 12px;border-radius:20px;margin-bottom:12px}
 .sunday-sec{margin-bottom:18px;padding-bottom:16px;border-bottom:0.5px solid #f5f5f5}
 .sunday-sec:last-child{border-bottom:none}
-.sunday-sec-label{font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#9b59b6;margin-bottom:7px}
-.sunday-sec-hl{font-size:15px;font-weight:700;color:#111;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;text-decoration:none;display:block}
+.sunday-sec-label{font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#9b59b6;margin-bottom:6px}
+.sunday-sec-hl{font-size:15px;font-weight:700;color:#111;font-family:Georgia,serif;line-height:1.35;margin-bottom:6px;text-decoration:none;display:block}
 .sunday-sec-hl:hover{color:#9b59b6}
-.sunday-sec-sum{font-size:12px;color:#666;line-height:1.7}
+.sunday-sec-sum{font-size:13px;color:#555;line-height:1.75}
 .sunday-read-link{display:inline-block;margin-top:8px;font-size:12px;color:#9b59b6;font-weight:700;text-decoration:none}
 .sunday-read-link:hover{text-decoration:underline}
 </style>
@@ -159,7 +166,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <body>
 <div class="app" id="app">
  
-<!-- ONBOARDING SCREEN -->
+<!-- ONBOARDING -->
 <div id="onboard-screen">
   <div style="background:#0f0f0f;padding:16px 20px 13px">
     <div class="logo" style="color:#fff">Daily Brief</div>
@@ -167,184 +174,178 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
   <div class="onboard">
     <div class="onboard-logo">Welcome ☕</div>
-    <div class="onboard-sub">Daily Brief learns what news you love and remembers your preferences across all your devices.</div>
- 
+    <div class="onboard-sub">Daily Brief learns what news you love and remembers your preferences across all your devices — the longer you use it, the smarter it gets.</div>
     <div class="onboard-card">
-      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:14px">How cross-device sync works</div>
+      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:14px">How it works</div>
       <div class="onboard-step">
         <div class="step-num">1</div>
-        <div class="step-text">Pick a <strong>username</strong> — anything you like, just for you to remember. No password or email needed.</div>
+        <div class="step-text">Pick a <strong>username</strong> — anything you like. No password or email needed.</div>
       </div>
       <div class="onboard-step">
         <div class="step-num">2</div>
-        <div class="step-text">Every time you ❤️ or ✕ a story, your taste profile <strong>saves to the cloud instantly</strong>.</div>
+        <div class="step-text">❤️ stories you enjoy. Your taste profile <strong>saves to the cloud instantly</strong>.</div>
       </div>
       <div class="onboard-step">
         <div class="step-num">3</div>
-        <div class="step-text">Open Daily Brief on any device, <strong>enter the same username</strong> and your full taste profile loads back automatically.</div>
+        <div class="step-text">Open on <strong>any device</strong>, enter the same username — your full profile loads back. After a month it'll know you well.</div>
       </div>
     </div>
- 
     <input class="onboard-input" id="username-input" type="text" placeholder="Choose a username (e.g. sarah123)" maxlength="30" autocomplete="off" autocapitalize="off">
-    <button class="onboard-btn" onclick="startWithUsername()">Start reading &#8594;</button>
-    <div class="onboard-note">Your username is just a lookup key — no account, no email, no password. Keep it private so others can't access your preferences.</div>
- 
+    <button class="onboard-btn" onclick="startWithUsername()">Start reading →</button>
+    <div class="onboard-note">Keep your username private — it's the only key to your preferences. No account, no email, no password.</div>
     <div class="onboard-divider">or</div>
     <span class="onboard-skip" onclick="startAnonymous()">Continue without syncing (this device only)</span>
   </div>
 </div>
  
-<!-- MAIN APP (hidden until username set) -->
+<!-- MAIN APP -->
 <div id="main-app" style="display:none">
- 
-<div class="masthead">
-  <div>
-    <div class="logo">Daily Brief</div>
-    <div class="logo-sub">Your morning intelligence</div>
-  </div>
-  <div style="text-align:right">
-    <div class="mh-date" id="mh-date"></div>
-    <div class="mh-live">Live</div>
-  </div>
-  <div style="display:flex;gap:7px">
-    <button class="mh-btn" onclick="gotoTab('profile')">&#127775; Taste</button>
-    <button class="mh-btn" onclick="loadAll()">&#8635; Refresh</button>
-  </div>
-</div>
- 
-<div id="sync-banner" class="sync-banner" style="display:none"></div>
- 
-<div class="nav">
-  <button class="ntab on" onclick="gotoTab('world',this)">&#127758; World</button>
-  <button class="ntab" onclick="gotoTab('business',this)">&#128200; Business</button>
-  <button class="ntab" onclick="gotoTab('sunday',this)">&#9749; Sunday</button>
-  <button class="ntab" onclick="gotoTab('week',this)">&#128337; This week</button>
-  <button class="ntab" onclick="gotoTab('profile',this)">&#127775; My taste</button>
-</div>
- 
-<!-- WORLD -->
-<div id="world-panel" class="panel on">
-  <div class="section-hero" style="background:#0d1b3e">
-    <img class="hero-bg-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=70&auto=format&fit=crop" alt="">
-    <div class="hero-scrim"></div>
-    <div class="hero-text">
-      <div class="hero-kicker" style="background:rgba(138,92,246,0.85);color:#fff">World news</div>
-      <div class="hero-title">Today's top world stories</div>
-      <div class="hero-sub">BBC · Guardian · Live RSS</div>
+  <div class="masthead">
+    <div>
+      <div class="logo">Daily Brief</div>
+      <div class="logo-sub">Your morning intelligence</div>
+    </div>
+    <div style="text-align:right">
+      <div class="mh-date" id="mh-date"></div>
+      <div class="mh-live">Live</div>
+    </div>
+    <div style="display:flex;gap:7px">
+      <button class="mh-btn" onclick="gotoTab('profile')">✦ Taste</button>
+      <button class="mh-btn" onclick="loadAll()">↺ Refresh</button>
     </div>
   </div>
-  <div class="taste-bar" id="world-taste-bar" style="display:none">
-    <div class="taste-label">Your taste</div>
-    <div class="taste-tags" id="world-taste-tags"></div>
-    <div class="taste-count" id="world-taste-count"></div>
-  </div>
-  <div class="feed-label">
-    <span>Latest stories</span>
-    <span class="for-you-badge" id="world-foryou-badge" style="display:none">Ranked for you</span>
-  </div>
-  <div id="world-feed"><div class="loading-row"><div class="spinner"></div>Loading live world news…</div></div>
-</div>
  
-<!-- BUSINESS -->
-<div id="business-panel" class="panel">
-  <div class="section-hero" style="background:#0a1f1a">
-    <img class="hero-bg-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=70&auto=format&fit=crop" alt="">
-    <div class="hero-scrim"></div>
-    <div class="hero-text">
-      <div class="hero-kicker" style="background:rgba(20,184,166,0.85);color:#fff">Business</div>
-      <div class="hero-title">Today's top business stories</div>
-      <div class="hero-sub">BBC · Guardian · Live RSS</div>
-    </div>
-  </div>
-  <div class="taste-bar" id="business-taste-bar" style="display:none">
-    <div class="taste-label">Your taste</div>
-    <div class="taste-tags" id="business-taste-tags"></div>
-    <div class="taste-count" id="business-taste-count"></div>
-  </div>
-  <div class="feed-label">
-    <span>Latest stories</span>
-    <span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span>
-  </div>
-  <div id="business-feed"><div class="loading-row"><div class="spinner"></div>Loading live business news…</div></div>
-</div>
+  <div id="sync-banner" class="sync-banner" style="display:none"></div>
  
-<!-- SUNDAY -->
-<div id="sunday-panel" class="panel">
-  <div class="sunday-hero">
-    <img class="sunday-hero-bg" id="sunday-img" src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&q=70&auto=format&fit=crop" alt="">
-    <div class="sunday-scrim"></div>
-    <div class="sunday-content">
-      <div class="sunday-pill">Sunday big read</div>
-      <div class="sunday-hl" id="sunday-hl">This week's long reads</div>
-    </div>
+  <div class="nav">
+    <button class="ntab on" onclick="gotoTab('world',this)">🌍 World</button>
+    <button class="ntab" onclick="gotoTab('business',this)">📈 Business</button>
+    <button class="ntab" onclick="gotoTab('sunday',this)">☕ Sunday</button>
+    <button class="ntab" onclick="gotoTab('week',this)">🗓 This week</button>
+    <button class="ntab" onclick="gotoTab('profile',this)">✦ My taste</button>
   </div>
-  <div class="sunday-body" id="sunday-body"><div class="loading-row"><div class="spinner"></div>Loading long reads…</div></div>
-</div>
  
-<!-- THIS WEEK -->
-<div id="week-panel" class="panel">
-  <div class="week-wrap">
-    <div class="week-title">The week so far</div>
-    <div class="week-sub">Top stories ranked for your taste</div>
-    <div id="week-feed"><div class="loading-row"><div class="spinner"></div>Loading week highlights…</div></div>
-  </div>
-</div>
- 
-<!-- MY TASTE -->
-<div id="profile-panel" class="panel">
-  <div class="profile-wrap">
-    <div class="profile-title">My taste profile</div>
-    <div class="profile-sub">Built from every ❤️ — synced across all your devices</div>
-    <div class="sync-status-row">
-      <div class="sync-status-text" id="sync-status-text">&#9679; Loading sync status…</div>
-      <button class="mh-btn" style="color:#555;border-color:#ddd;font-size:11px" onclick="switchUser()">Switch user</button>
-    </div>
-    <div class="kpi-row">
-      <div class="kpi"><div class="kpi-n" id="kpi-liked">0</div><div class="kpi-l">Liked</div></div>
-      <div class="kpi"><div class="kpi-n" id="kpi-skipped">0</div><div class="kpi-l">Skipped</div></div>
-      <div class="kpi"><div class="kpi-n" id="kpi-days">1</div><div class="kpi-l">Days reading</div></div>
-    </div>
-    <div id="profile-topics-section" style="display:none">
-      <div class="profile-section">
-        <div class="profile-section-title">Topics you love</div>
-        <div class="topic-grid" id="profile-topics"></div>
-      </div>
-      <div class="profile-section">
-        <div class="profile-section-title">Favourite sources</div>
-        <div id="profile-sources"></div>
-      </div>
-      <div class="profile-section">
-        <div class="profile-section-title">Saved articles</div>
-        <div id="profile-favs"></div>
+  <!-- WORLD -->
+  <div id="world-panel" class="panel on">
+    <div class="section-hero" style="background:#0d1b3e">
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=800&q=70&auto=format&fit=crop" alt="">
+      <div class="hero-scrim"></div>
+      <div class="hero-text">
+        <div class="hero-kicker" style="background:rgba(138,92,246,0.85);color:#fff">World news</div>
+        <div class="hero-title">Top 10 world stories</div>
+        <div class="hero-sub">BBC · Guardian · Live with 2-paragraph summaries</div>
       </div>
     </div>
-    <div id="profile-empty" class="empty-state">
-      Start hearting ❤️ articles you enjoy.<br><br>
-      Daily Brief will learn your interests and rank the most relevant stories to the top — synced across every device you use.
+    <div class="taste-bar" id="world-taste-bar" style="display:none">
+      <div class="taste-label">Your taste</div>
+      <div class="taste-tags" id="world-taste-tags"></div>
+      <div class="taste-count" id="world-taste-count"></div>
+    </div>
+    <div class="feed-label">
+      <span>Latest stories</span>
+      <span class="for-you-badge" id="world-foryou-badge" style="display:none">Ranked for you</span>
+    </div>
+    <div id="world-feed"><div class="loading-row"><div class="spinner"></div>Loading world news…</div></div>
+  </div>
+ 
+  <!-- BUSINESS -->
+  <div id="business-panel" class="panel">
+    <div class="section-hero" style="background:#0a1f1a">
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=70&auto=format&fit=crop" alt="">
+      <div class="hero-scrim"></div>
+      <div class="hero-text">
+        <div class="hero-kicker" style="background:rgba(20,184,166,0.85);color:#fff">Business</div>
+        <div class="hero-title">Top 10 business stories</div>
+        <div class="hero-sub">BBC · Guardian · Live with 2-paragraph summaries</div>
+      </div>
+    </div>
+    <div class="taste-bar" id="business-taste-bar" style="display:none">
+      <div class="taste-label">Your taste</div>
+      <div class="taste-tags" id="business-taste-tags"></div>
+      <div class="taste-count" id="business-taste-count"></div>
+    </div>
+    <div class="feed-label">
+      <span>Latest stories</span>
+      <span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span>
+    </div>
+    <div id="business-feed"><div class="loading-row"><div class="spinner"></div>Loading business news…</div></div>
+  </div>
+ 
+  <!-- SUNDAY -->
+  <div id="sunday-panel" class="panel">
+    <div class="sunday-hero">
+      <img class="sunday-hero-bg" id="sunday-img" src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&q=70&auto=format&fit=crop" alt="">
+      <div class="sunday-scrim"></div>
+      <div class="sunday-content">
+        <div class="sunday-pill">Sunday big read</div>
+        <div class="sunday-hl" id="sunday-hl">This week's long reads</div>
+      </div>
+    </div>
+    <div class="sunday-body" id="sunday-body"><div class="loading-row"><div class="spinner"></div>Loading long reads…</div></div>
+  </div>
+ 
+  <!-- THIS WEEK -->
+  <div id="week-panel" class="panel">
+    <div class="week-wrap">
+      <div class="week-title">The week so far</div>
+      <div class="week-sub">Top stories with summaries — ranked for your taste</div>
+      <div id="week-feed"><div class="loading-row"><div class="spinner"></div>Loading week highlights…</div></div>
+    </div>
+  </div>
+ 
+  <!-- MY TASTE -->
+  <div id="profile-panel" class="panel">
+    <div class="profile-wrap">
+      <div class="profile-title">My taste profile</div>
+      <div class="profile-sub">Built from every ❤️ — synced across all your devices</div>
+      <div class="sync-status-row">
+        <div class="sync-status-text" id="sync-status-text">Loading…</div>
+        <button class="mh-btn" style="color:#555;border-color:#ddd;font-size:11px" onclick="switchUser()">Switch user</button>
+      </div>
+      <div class="kpi-row">
+        <div class="kpi"><div class="kpi-n" id="kpi-liked">0</div><div class="kpi-l">Liked</div></div>
+        <div class="kpi"><div class="kpi-n" id="kpi-skipped">0</div><div class="kpi-l">Skipped</div></div>
+        <div class="kpi"><div class="kpi-n" id="kpi-days">1</div><div class="kpi-l">Days reading</div></div>
+      </div>
+      <div id="profile-topics-section" style="display:none">
+        <div class="profile-section">
+          <div class="profile-section-title">Topics you love</div>
+          <div class="topic-grid" id="profile-topics"></div>
+        </div>
+        <div class="profile-section">
+          <div class="profile-section-title">Favourite sources</div>
+          <div id="profile-sources"></div>
+        </div>
+        <div class="profile-section">
+          <div class="profile-section-title">Saved articles</div>
+          <div id="profile-favs"></div>
+        </div>
+      </div>
+      <div id="profile-empty" class="empty-state">
+        Start hearting ❤️ articles you enjoy.<br><br>
+        Daily Brief will learn your interests and rank the most relevant stories to the top — synced across every device you use.<br><br>
+        <strong>After a month it will have a very accurate picture of what you love.</strong>
+      </div>
     </div>
   </div>
 </div>
- 
-</div><!-- end main-app -->
-</div><!-- end .app -->
+</div>
  
 <script>
-/* ── Supabase config ── */
+/* ── Supabase ── */
 var SB_URL='https://przwlzkiyikwdvnkgnqyu.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByendsemt5aWt3ZHZua2ducXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODc3NjcsImV4cCI6MjA5MTA2Mzc2N30.dQ_VNVXvyl-X0DihGTtnPihT5WPuep1Lnea86oAoW1s';
-var SB_TABLE='preferences';
  
 /* ── state ── */
-var currentUser=null;
-var syncMode=false; /* false = anonymous / localStorage only */
-var favs=[], nopes=[], tasteProfile={keywords:{},sources:{},sentiments:{},total:0}, daysArr=[];
+var currentUser=null, syncMode=false;
+var favs=[], nopes=[], taste={keywords:{},sources:{},sentiments:{},total:0}, daysArr=[];
 var syncTimer=null;
  
-/* ── helpers ── */
+/* ── utils ── */
 function sl(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v!=null?v:d;}catch(e){return d;}}
 function ss(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function stripHtml(s){var d=document.createElement('div');d.innerHTML=s||'';return d.textContent||'';}
+function sh(s){var d=document.createElement('div');d.innerHTML=s||'';return d.textContent||'';}
 function timeAgo(str){
   try{var d=new Date(str),m=Math.floor((new Date()-d)/60000);
   if(isNaN(m)||m<0)return '';
@@ -356,141 +357,97 @@ function timeAgo(str){
 /* ── onboarding ── */
 function startWithUsername(){
   var u=(document.getElementById('username-input').value||'').trim().toLowerCase().replace(/[^a-z0-9_]/g,'');
-  if(!u||u.length<2){alert('Please enter a username of at least 2 characters (letters and numbers only).');return;}
-  currentUser=u;
-  syncMode=true;
-  ss('db_user','{"user":"'+u+'","sync":true}');
-  showMainApp();
-  loadFromSupabase();
+  if(!u||u.length<2){alert('Please enter a username of at least 2 characters.');return;}
+  currentUser=u; syncMode=true;
+  ss('db_user',{user:u,sync:true});
+  showApp(); loadFromSupabase();
 }
- 
 function startAnonymous(){
-  currentUser='anon_'+Math.random().toString(36).substring(2,8);
+  currentUser='local_'+Math.random().toString(36).substring(2,8);
   syncMode=false;
-  ss('db_user','{"user":"'+currentUser+'","sync":false}');
-  loadLocalPrefs();
-  showMainApp();
-  loadAll();
+  ss('db_user',{user:currentUser,sync:false});
+  loadLocalPrefs(); showApp(); loadAll();
 }
- 
-function showMainApp(){
+function showApp(){
   document.getElementById('onboard-screen').style.display='none';
   document.getElementById('main-app').style.display='block';
   initMeta();
 }
- 
 function switchUser(){
-  if(!confirm('Switch user? Your taste profile will reload for the new username.'))return;
+  if(!confirm('Switch user? You can log back in any time with your username.'))return;
   ss('db_user',null);
   document.getElementById('onboard-screen').style.display='block';
   document.getElementById('main-app').style.display='none';
   document.getElementById('username-input').value='';
 }
  
-/* ── Supabase API ── */
-async function sbFetch(method,body){
-  var opts={method:method,headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=representation'}};
-  if(body)opts.body=JSON.stringify(body);
-  var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE+'?user_id=eq.'+encodeURIComponent(currentUser),opts);
-  return r;
-}
- 
+/* ── Supabase sync ── */
 async function loadFromSupabase(){
-  showBanner('syncing','&#9679; Loading your preferences…');
+  showBanner('syncing','⬤ Loading your preferences…');
   try{
-    var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE+'?user_id=eq.'+encodeURIComponent(currentUser),
+    var r=await fetch(SB_URL+'/rest/v1/preferences?user_id=eq.'+encodeURIComponent(currentUser),
       {headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}});
     var rows=await r.json();
-    if(rows&&rows.length>0){
+    if(rows&&rows.length){
       var row=rows[0];
-      favs=row.favs||[];
-      nopes=row.nopes||[];
-      tasteProfile=row.taste||{keywords:{},sources:{},sentiments:{},total:0};
+      favs=row.favs||[]; nopes=row.nopes||[];
+      taste=row.taste||{keywords:{},sources:{},sentiments:{},total:0};
       daysArr=row.days||[];
-      trackDay();
-      showBanner('ok','&#10003; Synced — welcome back, '+currentUser+'!');
-    }else{
-      /* new user */
+    } else {
       loadLocalPrefs();
       await saveToSupabase();
-      showBanner('ok','&#10003; New profile created for '+currentUser);
     }
-    updateSyncStatus();
-    hideBannerAfter(3000);
-    loadAll();
+    trackDay();
+    showBanner('ok','✓ Synced — welcome back, '+currentUser+'!');
+    hideBanner(3000);
+    updateSyncStatus(); loadAll();
   }catch(e){
-    loadLocalPrefs();
-    showBanner('error','&#9888; Could not connect to sync — using local preferences');
-    hideBannerAfter(4000);
+    loadLocalPrefs(); trackDay();
+    showBanner('error','⚠ Could not connect — using local preferences');
+    hideBanner(4000);
     loadAll();
   }
 }
- 
 async function saveToSupabase(){
   if(!syncMode)return;
   try{
-    /* upsert */
-    var body={user_id:currentUser,favs:favs,nopes:nopes,taste:tasteProfile,days:daysArr,updated_at:new Date().toISOString()};
-    var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE,{
+    await fetch(SB_URL+'/rest/v1/preferences',{
       method:'POST',
       headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'resolution=merge-duplicates,return=minimal'},
-      body:JSON.stringify(body)
+      body:JSON.stringify({user_id:currentUser,favs:favs,nopes:nopes,taste:taste,days:daysArr,updated_at:new Date().toISOString()})
     });
-    if(!r.ok)throw new Error('save failed');
     updateSyncStatus();
-  }catch(e){
-    /* fail silently — preferences still work locally */
-    console.warn('Supabase save failed',e);
-  }
+  }catch(e){console.warn('Sync save failed',e);}
 }
- 
-function scheduleSave(){
-  clearTimeout(syncTimer);
-  syncTimer=setTimeout(saveToSupabase,1500);
-}
- 
+function scheduleSave(){clearTimeout(syncTimer);syncTimer=setTimeout(saveToSupabase,1500);}
 function loadLocalPrefs(){
-  var stored=sl('db_prefs_local',null);
-  if(stored){favs=stored.favs||[];nopes=stored.nopes||[];tasteProfile=stored.taste||{keywords:{},sources:{},sentiments:{},total:0};daysArr=stored.days||[];}
-  trackDay();
+  var s=sl('db_local_prefs',null);
+  if(s){favs=s.favs||[];nopes=s.nopes||[];taste=s.taste||{keywords:{},sources:{},sentiments:{},total:0};daysArr=s.days||[];}
 }
- 
-function saveLocalPrefs(){
-  ss('db_prefs_local',{favs:favs,nopes:nopes,taste:tasteProfile,days:daysArr});
-}
- 
-function trackDay(){
-  var td=new Date().toDateString();
-  if(!daysArr.includes(td))daysArr.push(td);
-}
- 
-/* ── sync banner ── */
+function saveLocalPrefs(){ss('db_local_prefs',{favs:favs,nopes:nopes,taste:taste,days:daysArr});}
+function trackDay(){var td=new Date().toDateString();if(!daysArr.includes(td))daysArr.push(td);}
 function showBanner(type,msg){
   var b=document.getElementById('sync-banner');
-  b.style.display='flex';
-  b.className='sync-banner'+(type==='error'?' error':type==='syncing'?' syncing':'');
-  b.innerHTML=msg;
+  b.style.display='flex'; b.className='sync-banner'+(type==='error'?' error':type==='syncing'?' syncing':'');
+  b.textContent=msg;
 }
-function hideBannerAfter(ms){setTimeout(function(){document.getElementById('sync-banner').style.display='none';},ms);}
+function hideBanner(ms){setTimeout(function(){document.getElementById('sync-banner').style.display='none';},ms);}
 function updateSyncStatus(){
-  var el=document.getElementById('sync-status-text');
-  if(!el)return;
-  if(syncMode){
-    el.innerHTML='<span style="color:#2ecc71">&#9679;</span> Synced as <strong>'+esc(currentUser)+'</strong> — works on all devices';
-  }else{
-    el.innerHTML='<span style="color:#f39c12">&#9679;</span> Local only ('+esc(currentUser)+') — <span style="color:#9b59b6;cursor:pointer;text-decoration:underline" onclick="switchUser()">enable sync</span>';
-  }
+  var el=document.getElementById('sync-status-text'); if(!el)return;
+  el.innerHTML=syncMode
+    ?'<span style="color:#2ecc71">⬤</span> Synced as <strong>'+esc(currentUser)+'</strong> — works on all devices'
+    :'<span style="color:#f39c12">⬤</span> Local only — <span style="color:#9b59b6;cursor:pointer;text-decoration:underline" onclick="switchUser()">enable sync</span>';
   document.getElementById('kpi-liked').textContent=favs.length;
   document.getElementById('kpi-skipped').textContent=nopes.length;
   document.getElementById('kpi-days').textContent=daysArr.length;
 }
  
-/* ── date ── */
+/* ── meta ── */
 function initMeta(){
   var d=new Date();
-  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-  var mons=['January','February','March','April','May','June','July','August','September','October','November','December'];
-  document.getElementById('mh-date').textContent=days[d.getDay()]+' '+d.getDate()+' '+mons[d.getMonth()]+' '+d.getFullYear();
+  var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  document.getElementById('mh-date').textContent=D[d.getDay()]+' '+d.getDate()+' '+M[d.getMonth()]+' '+d.getFullYear();
 }
  
 /* ── tabs ── */
@@ -503,59 +460,41 @@ function gotoTab(name,btn){
   if(name==='profile'){renderProfile();updateSyncStatus();}
 }
  
-/* ── TASTE ENGINE ── */
-var STOP={'the':1,'a':1,'an':1,'and':1,'or':1,'but':1,'in':1,'on':1,'at':1,'to':1,'for':1,'of':1,'with':1,'by':1,'from':1,'is':1,'are':1,'was':1,'were':1,'be':1,'been':1,'has':1,'have':1,'had':1,'it':1,'its':1,'this':1,'that':1,'as':1,'over':1,'up':1,'out':1,'about':1,'into':1,'after':1,'new':1,'says':1,'said':1,'will':1,'could':1,'would':1,'he':1,'she':1,'they':1,'we':1,'his':1,'her':1,'their':1,'how':1,'why':1,'what':1,'who':1,'when':1,'than':1,'more':1,'amid':1,'not':1,'can':1,'also':1,'just':1};
- 
-function extractKw(text){
-  return (text||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>3&&!STOP[w];});
+/* ── taste engine ── */
+var STOP={the:1,a:1,an:1,and:1,or:1,but:1,in:1,on:1,at:1,to:1,for:1,of:1,with:1,by:1,from:1,is:1,are:1,was:1,were:1,be:1,been:1,has:1,have:1,had:1,it:1,its:1,this:1,that:1,as:1,over:1,up:1,out:1,about:1,into:1,after:1,new:1,says:1,said:1,will:1,could:1,would:1,he:1,she:1,they:1,we:1,his:1,her:1,their:1,how:1,why:1,what:1,who:1,when:1,than:1,more:1,amid:1,not:1,can:1,also:1,just:1,one:1,two:1,three:1};
+function xKw(t){return (t||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>3&&!STOP[w];});}
+function learn(art,w){
+  taste.total=(taste.total||0)+1;
+  xKw((art.headline||'')+' '+(art.summary||'')).forEach(function(k){taste.keywords[k]=(taste.keywords[k]||0)+w;});
+  if(art.source)taste.sources[art.source]=(taste.sources[art.source]||0)+w;
+  if(art.sentiment)taste.sentiments[art.sentiment]=(taste.sentiments[art.sentiment]||0)+w;
+  saveLocalPrefs(); scheduleSave();
 }
- 
-function learn(article,weight){
-  var p=tasteProfile;
-  p.total=(p.total||0)+1;
-  extractKw((article.headline||'')+' '+(article.summary||'')).forEach(function(w){p.keywords[w]=(p.keywords[w]||0)+weight;});
-  if(article.source)p.sources[article.source]=(p.sources[article.source]||0)+weight;
-  if(article.sentiment)p.sentiments[article.sentiment]=(p.sentiments[article.sentiment]||0)+weight;
-  saveLocalPrefs();
-  scheduleSave();
-}
- 
-function score(article){
-  var p=tasteProfile;
-  if(!p.total||p.total<2)return 0;
-  var s=0;
-  var kwTotal=Object.values(p.keywords).reduce(function(a,b){return a+(b>0?b:0);},0)||1;
-  extractKw((article.headline||'')+' '+(article.summary||'')).forEach(function(w){
-    if(p.keywords[w])s+=(p.keywords[w]/kwTotal)*(p.keywords[w]>0?60:30);
-  });
-  if(article.source&&p.sources[article.source]>0)s+=Math.min(p.sources[article.source]*5,20);
-  if(article.sentiment&&p.sentiments[article.sentiment]>0)s+=5;
+function scoreArt(art){
+  if(!taste.total||taste.total<2)return 0;
+  var s=0, tot=Object.values(taste.keywords).reduce(function(a,b){return a+(b>0?b:0);},0)||1;
+  xKw((art.headline||'')+' '+(art.summary||'')).forEach(function(k){if(taste.keywords[k])s+=(taste.keywords[k]/tot)*(taste.keywords[k]>0?60:30);});
+  if(art.source&&taste.sources[art.source]>0)s+=Math.min(taste.sources[art.source]*5,20);
+  if(art.sentiment&&taste.sentiments[art.sentiment]>0)s+=5;
   return Math.min(100,Math.max(0,Math.round(s)));
 }
- 
 function rankFilter(arts){
-  var nopeSet={};nopes.forEach(function(id){nopeSet[id]=true;});
-  return arts.filter(function(a){return !nopeSet[a.id];})
-    .map(function(a){a._score=score(a);return a;})
-    .sort(function(a,b){return b._score-a._score;});
+  var ns={};nopes.forEach(function(id){ns[id]=true;});
+  return arts.filter(function(a){return !ns[a.id];}).map(function(a){a._score=scoreArt(a);return a;}).sort(function(a,b){return b._score-a._score;});
 }
- 
-function getTopKw(n){
-  return Object.entries(tasteProfile.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});
+function topKw(n){
+  return Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});
 }
- 
 function updateTasteBars(){
-  var tops=getTopKw(6);
+  var tops=topKw(6);
   ['world','business'].forEach(function(sec){
     var bar=document.getElementById(sec+'-taste-bar');
-    var tagsEl=document.getElementById(sec+'-taste-tags');
     var badge=document.getElementById(sec+'-foryou-badge');
     if(!bar)return;
-    if(tops.length>0){
-      bar.style.display='flex';
-      badge.style.display='inline-block';
+    if(tops.length){
+      bar.style.display='flex'; badge.style.display='inline-block';
       document.getElementById(sec+'-taste-count').textContent=favs.length+' liked';
-      tagsEl.innerHTML=tops.map(function(t){return '<span class="taste-tag">'+esc(t)+'</span>';}).join('');
+      document.getElementById(sec+'-taste-tags').innerHTML=tops.map(function(t){return '<span class="taste-tag">'+esc(t)+'</span>';}).join('');
     }else{bar.style.display='none';badge.style.display='none';}
   });
 }
@@ -563,7 +502,7 @@ function updateTasteBars(){
 /* ── sentiment ── */
 function sentiment(t){
   t=(t||'').toLowerCase();
-  var b=['kill','dead','crash','attack','war','crisis','flood','fire','storm','collapse','fail','loss','cut','strike','threat','conflict','explosion','arrest','scandal','deficit','recession','inflation','layoff','bankrupt','sanction','missile','bomb','shooting','death','murder','terror','earthquake','protest','riot','injured'];
+  var b=['kill','dead','crash','attack','war','crisis','flood','fire','storm','collapse','fail','loss','cut','strike','threat','conflict','explosion','arrest','scandal','deficit','recession','inflation','layoff','bankrupt','sanction','missile','bomb','shooting','death','murder','terror','earthquake','protest','riot'];
   var g=['record','growth','peace','cure','breakthrough','rise','gain','success','deal','recover','safe','boost','milestone','award','launch','invest','soar','profit','agree','celebrate','historic','improve','discovery','hope'];
   var bs=b.filter(function(w){return t.indexOf(w)>-1;}).length;
   var gs=g.filter(function(w){return t.indexOf(w)>-1;}).length;
@@ -574,85 +513,145 @@ function sentLabel(s){return s==='good'?'Positive':s==='bad'?'Difficult':'Develo
 function sentTag(s){return '<span class="sent-tag '+(s==='good'?'st-good':s==='bad'?'st-bad':'st-neutral')+'">'+sentLabel(s)+'</span>';}
 function dotCol(s){return s==='good'?'#2ecc71':s==='bad'?'#e74c3c':'#9b59b6';}
  
-var IW=['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d'];
-var IB=['photo-1611974789855-9c2a0a7236a3','photo-1535320903710-d993d3d77d29','photo-1460925895917-afdab827c52f','photo-1504711434969-e33886168f5c','photo-1611532736597-de2d4265fba3','photo-1590283603385-17ffb3a7f29f'];
+/* ── summariser ── */
+function buildSummary(desc){
+  /* Split raw RSS description into 2 clean paragraphs */
+  var clean=sh(desc).replace(/\s+/g,' ').trim();
+  if(!clean||clean.length<40)return '';
+  /* Try to split at sentence boundary near midpoint */
+  var sentences=clean.match(/[^.!?]+[.!?]+/g)||[clean];
+  if(sentences.length<=1){
+    /* Just split at word near midpoint */
+    var mid=Math.floor(clean.length/2);
+    var space=clean.indexOf(' ',mid);
+    if(space>-1&&space<clean.length-20){
+      return '<p>'+esc(clean.substring(0,space).trim())+'</p><p>'+esc(clean.substring(space).trim())+'</p>';
+    }
+    return '<p>'+esc(clean)+'</p>';
+  }
+  var half=Math.ceil(sentences.length/2);
+  var p1=sentences.slice(0,half).join('').trim();
+  var p2=sentences.slice(half).join('').trim();
+  if(!p2)return '<p>'+esc(p1)+'</p>';
+  return '<p>'+esc(p1)+'</p><p>'+esc(p2)+'</p>';
+}
+ 
+/* ── images ── */
+var IW=['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d','photo-1516738901171-8eb4fc13bd20','photo-1569163139599-0f4517e36f51','photo-1504711434969-e33886168f5c','photo-1480099225005-2513c8947f34'];
+var IB=['photo-1611974789855-9c2a0a7236a3','photo-1535320903710-d993d3d77d29','photo-1460925895917-afdab827c52f','photo-1504711434969-e33886168f5c','photo-1611532736597-de2d4265fba3','photo-1590283603385-17ffb3a7f29f','photo-1559526324-593bc073d938','photo-1434626881859-194d67b2b86f','photo-1579621970563-ebec7560ff3e','photo-1551288049-bebda4e38f71'];
 function thumb(sec,i,w,h){var p=sec==='business'?IB:IW;return 'https://images.unsplash.com/'+p[i%p.length]+'?w='+w+'&h='+h+'&q=75&auto=format&fit=crop';}
  
 /* ── RSS ── */
 async function fetchRSS(url){
-  var r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent(url)+'&t='+Date.now());
-  if(!r.ok)throw new Error('HTTP '+r.status);
-  var json=await r.json();
+  var proxy='https://api.allorigins.win/get?url='+encodeURIComponent(url)+'&t='+Date.now();
+  var resp=await fetch(proxy,{cache:'no-store'});
+  if(!resp.ok)throw new Error('HTTP '+resp.status);
+  var json=await resp.json();
   var xml=json.contents;
-  if(!xml||xml.length<100)throw new Error('empty');
+  if(!xml||xml.length<200)throw new Error('empty');
   var doc=new DOMParser().parseFromString(xml,'text/xml');
-  var ct=doc.querySelector('channel>title');
-  var src=ct?ct.textContent.replace(/ - Home$/,'').replace(/ \| Reuters$/,'').replace(/^The Guardian/,'Guardian').trim():'';
+  var ct=doc.querySelector('channel > title');
+  var src=ct?ct.textContent.replace(/ - Home$/,'').replace(/ \| Reuters$/,'').replace(/^The Guardian$/,'Guardian').trim():'News';
   return Array.from(doc.querySelectorAll('item')).map(function(item){
-    var g=function(tag){var el=item.querySelector(tag);return el?el.textContent:'';};
-    var title=stripHtml(g('title'));
-    var desc=stripHtml(g('description')).replace(/\s+/g,' ').trim();
+    var g=function(sel){var el=item.querySelector(sel);return el?el.textContent.trim():'';};
+    var title=sh(g('title'));
+    var rawDesc=g('description')||g('summary')||'';
     var link=g('link')||g('guid');
-    return {id:link||title,headline:title,summary:desc.length>200?desc.substring(0,200)+'…':desc,source:src,link:link,pubDate:g('pubDate'),sentiment:sentiment(title+' '+desc),_score:0};
-  }).filter(function(a){return a.headline.length>5;});
+    var pub=g('pubDate')||g('published');
+    return {
+      id:(link||title).substring(0,120),
+      headline:title,
+      rawDesc:rawDesc,
+      summary:buildSummary(rawDesc),
+      source:src,
+      link:link,
+      pubDate:pub,
+      sentiment:sentiment(title+' '+sh(rawDesc)),
+      _score:0
+    };
+  }).filter(function(a){return a.headline&&a.headline.length>5;});
 }
  
-var FW=['https://feeds.bbci.co.uk/news/world/rss.xml','https://feeds.bbci.co.uk/news/uk/rss.xml','https://feeds.theguardian.com/theguardian/world/rss'];
-var FB=['https://feeds.bbci.co.uk/news/business/rss.xml','https://feeds.bbci.co.uk/news/technology/rss.xml','https://feeds.theguardian.com/theguardian/business/rss'];
-var FWK=['https://feeds.bbci.co.uk/news/rss.xml','https://feeds.theguardian.com/theguardian/uk/rss'];
-var FSun=['https://feeds.theguardian.com/theguardian/theguardian/rss'];
+/* ── RSS feed URLs — tested working ── */
+var FW=[
+  'https://feeds.bbci.co.uk/news/world/rss.xml',
+  'https://feeds.bbci.co.uk/news/uk/rss.xml',
+  'https://feeds.theguardian.com/theguardian/world/rss',
+  'https://feeds.theguardian.com/theguardian/uk/rss'
+];
+var FB=[
+  'https://feeds.bbci.co.uk/news/business/rss.xml',
+  'https://feeds.bbci.co.uk/news/technology/rss.xml',
+  'https://feeds.theguardian.com/theguardian/business/rss',
+  'https://feeds.theguardian.com/theguardian/technology/rss'
+];
+var FWEEK=[
+  'https://feeds.bbci.co.uk/news/rss.xml',
+  'https://feeds.bbci.co.uk/news/world/rss.xml',
+  'https://feeds.theguardian.com/theguardian/uk/rss'
+];
+var FSUN=[
+  'https://feeds.theguardian.com/theguardian/theguardian/rss',
+  'https://feeds.bbci.co.uk/news/magazine/rss.xml'
+];
  
 async function loadSection(sec){
   var el=document.getElementById(sec+'-feed');
   var feeds=sec==='business'?FB:FW;
   try{
     var results=await Promise.allSettled(feeds.map(fetchRSS));
-    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var all=[];
+    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
     if(!all.length)throw new Error('no items');
+    /* dedupe by headline */
     var seen={};
-    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
-    all=rankFilter(all).slice(0,12);
+    all=all.filter(function(a){
+      var k=a.headline.toLowerCase().substring(0,60);
+      if(seen[k])return false; seen[k]=true; return true;
+    });
+    /* rank + limit to 10 */
+    all=rankFilter(all).slice(0,10);
     renderFeed(sec,all);
     updateTasteBars();
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load live news.<br><br><button class="retry-btn" onclick="loadSection(\''+sec+'\')">&#8635; Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load news right now.<br><br><button class="retry-btn" onclick="loadSection(\''+sec+'\')">↺ Try again</button></div>';
   }
 }
  
 function renderFeed(sec,arts){
   var el=document.getElementById(sec+'-feed');
   if(!arts||!arts.length){el.innerHTML='<div class="error-box">No stories found.</div>';return;}
-  var hasProfile=tasteProfile.total>=2;
+  var hasProfile=taste.total>=2;
   var h='';
   arts.forEach(function(a,i){
     var iF=favs.some(function(f){return f.id===a.id;});
     var iN=nopes.indexOf(a.id)>-1;
     var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
-    var eid=encodeURIComponent(a.id),ehl=encodeURIComponent(a.headline),esrc=encodeURIComponent(a.source),esum=encodeURIComponent(a.summary||'');
-    var matchHtml=hasProfile&&a._score>=30?'<span class="match-pill">'+a._score+'% match</span>':'';
+    var eid=encodeURIComponent(a.id);
+    var ehl=encodeURIComponent(a.headline);
+    var esrc=encodeURIComponent(a.source);
+    var esum=encodeURIComponent(sh(a.rawDesc||'').substring(0,300));
+    var matchPill=hasProfile&&a._score>=25?'<span class="match-pill">'+a._score+'% match</span>':'';
+    var foryouStrip=hasProfile&&a._score>=35?'<div class="for-you-strip"></div>':'';
     var acts='<div class="act-row" onclick="event.preventDefault();event.stopPropagation()">'
-      +'<button class="act-btn'+(iF?' fav-on':'')+'" title="Like" onclick="tFav(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+sec+'\',\''+esum+'\',this)">&#9829;</button>'
-      +'<button class="act-btn'+(iN?' nope-on':'')+'" title="Not for me" onclick="tNope(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+esum+'\',this)">&#10005;</button>'
+      +'<button class="act-btn'+(iF?' fav-on':'')+'" title="Like this story" onclick="tFav(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+sec+'\',\''+esum+'\',this)">♥</button>'
+      +'<button class="act-btn'+(iN?' nope-on':'')+'" title="Not for me" onclick="tNope(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+esum+'\',this)">✕</button>'
       +'</div>';
-    if(i===0){
-      h+='<a class="art-item lead sb-'+a.sentiment+'"'+href+'>'
-        +(hasProfile&&a._score>=30?'<div class="for-you-strip"></div>':'')
-        +'<img class="lead-img" src="'+thumb(sec,0,700,280)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-        +'<div class="lead-body"><div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+matchHtml+'</div>'
-        +'<div class="art-hl">'+esc(a.headline)+'</div><div class="art-sum">'+esc(a.summary)+'</div>'
-        +'<div class="art-meta"><span class="art-src">'+esc(a.source)+(a.pubDate?' &middot; '+timeAgo(a.pubDate):'')+'</span>'+acts+'</div></div></a>';
-    }else{
-      h+='<a class="art-item"'+href+'>'
-        +(hasProfile&&a._score>=40?'<div style="position:absolute;left:0;top:0;bottom:0;width:2px;background:#a78bfa"></div>':'')
-        +'<img class="art-thumb" src="'+thumb(sec,i,176,140)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
-        +'<div class="art-body"><div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+' &middot; '+esc(a.source)+matchHtml+'</div>'
-        +'<div class="art-hl-sm">'+esc(a.headline)+'</div>'
-        +'<div class="art-meta"><span class="art-src">'+timeAgo(a.pubDate)+'</span>'+acts+'</div></div></a>';
-    }
+    h+='<div class="art-item sb-'+a.sentiment+'">'
+      +foryouStrip
+      +'<div class="art-img-wrap'+(i===0?' lead':'')+'"><img class="art-img" src="'+thumb(sec,i,700,i===0?280:200)+'" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>'
+      +'<div class="art-body">'
+        +'<div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+(a.pubDate?' · <span style="color:#bbb;font-weight:400">'+timeAgo(a.pubDate)+'</span>':'')+matchPill+'</div>'
+        +'<div class="art-hl">'+esc(a.headline)+'</div>'
+        +(a.summary?'<div class="art-summary">'+a.summary+'</div>':'')
+        +'<div class="art-meta"><span class="art-src">'+esc(a.source)+'</span>'+acts+'</div>'
+        +(a.link?'<a class="read-more" href="'+esc(a.link)+'" target="_blank" rel="noopener">Read full article →</a>':'')
+      +'</div></div>';
   });
   el.innerHTML=h;
 }
  
+/* ── like / nope ── */
 function tFav(eid,ehl,esrc,sent,sec,esum,btn){
   var id=decodeURIComponent(eid),hl=decodeURIComponent(ehl),src=decodeURIComponent(esrc),sum=decodeURIComponent(esum||'');
   var idx=favs.findIndex(function(f){return f.id===id;});
@@ -662,23 +661,23 @@ function tFav(eid,ehl,esrc,sent,sec,esum,btn){
     learn({headline:hl,summary:sum,source:src,sentiment:sent},1);
     toast('Liked! Taste profile updated ✓');
   }else{
-    favs.splice(idx,1);btn.classList.remove('fav-on');
+    favs.splice(idx,1); btn.classList.remove('fav-on');
     learn({headline:hl,summary:sum,source:src,sentiment:sent},-1);
   }
-  saveLocalPrefs();scheduleSave();
+  saveLocalPrefs(); scheduleSave();
   document.getElementById('kpi-liked').textContent=favs.length;
   updateTasteBars();
 }
- 
 function tNope(eid,ehl,esrc,sent,esum,btn){
   var id=decodeURIComponent(eid),hl=decodeURIComponent(ehl||''),src=decodeURIComponent(esrc||''),sum=decodeURIComponent(esum||'');
   var i=nopes.indexOf(id);
   if(i===-1){nopes.push(id);btn.classList.add('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},-0.5);}
   else{nopes.splice(i,1);btn.classList.remove('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},0.5);}
-  saveLocalPrefs();scheduleSave();
+  saveLocalPrefs(); scheduleSave();
   document.getElementById('kpi-skipped').textContent=nopes.length;
 }
  
+/* ── toast ── */
 function toast(msg){
   var t=document.createElement('div');
   t.textContent=msg;
@@ -688,6 +687,7 @@ function toast(msg){
   setTimeout(function(){t.style.opacity='0';setTimeout(function(){t.remove();},300);},2200);
 }
  
+/* ── profile ── */
 function renderProfile(){
   document.getElementById('kpi-liked').textContent=favs.length;
   document.getElementById('kpi-skipped').textContent=nopes.length;
@@ -699,75 +699,106 @@ function renderProfile(){
   }
   document.getElementById('profile-empty').style.display='none';
   document.getElementById('profile-topics-section').style.display='block';
-  var allKw=Object.entries(tasteProfile.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,20);
+  var allKw=Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,20);
   var maxKw=allKw.length?allKw[0][1]:1;
   document.getElementById('profile-topics').innerHTML=allKw.map(function(e){
     var str=e[1]/maxKw;
     return '<span class="topic-chip '+(str>0.6?'tc-strong':str>0.3?'tc-medium':'tc-light')+'">'+esc(e[0])+'</span>';
   }).join('');
-  var srcE=Object.entries(tasteProfile.sources||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,6);
+  var srcE=Object.entries(taste.sources||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,6);
   var maxS=srcE.length?srcE[0][1]:1;
   document.getElementById('profile-sources').innerHTML=srcE.map(function(e){
     return '<div class="source-row"><span class="source-name">'+esc(e[0])+'</span><div class="source-bar-wrap"><div class="source-bar" style="width:'+Math.round(e[1]/maxS*100)+'%"></div></div><span class="source-count">'+e[1]+' liked</span></div>';
-  }).join('')||'<div style="font-size:13px;color:#bbb">Like more articles to see your top sources.</div>';
+  }).join('')||'<div style="font-size:13px;color:#bbb">Like more articles to see your favourite sources.</div>';
   document.getElementById('profile-favs').innerHTML=favs.map(function(f){
-    return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div><div style="flex:1;min-width:0"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' &middot; '+esc(f.section)+'</div></div><span class="fav-rm" onclick="rmFav(\''+encodeURIComponent(f.id)+'\')">remove</span></div>';
+    return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div>'
+      +'<div style="flex:1;min-width:0"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' · '+esc(f.section)+'</div></div>'
+      +'<span class="fav-rm" onclick="rmFav(\''+encodeURIComponent(f.id)+'\')">remove</span></div>';
   }).join('');
 }
- 
 function rmFav(eid){
   var id=decodeURIComponent(eid);
   var art=favs.find(function(f){return f.id===id;});
   if(art)learn(art,-1);
   favs=favs.filter(function(f){return f.id!==id;});
-  saveLocalPrefs();scheduleSave();
-  renderProfile();updateTasteBars();
+  saveLocalPrefs(); scheduleSave();
+  renderProfile(); updateTasteBars();
 }
  
+/* ── this week ── */
 async function loadWeek(){
   var el=document.getElementById('week-feed');
   try{
-    var results=await Promise.allSettled(FWK.map(fetchRSS));
-    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var results=await Promise.allSettled(FWEEK.map(fetchRSS));
+    var all=[];
+    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
     if(!all.length)throw new Error('empty');
     var seen={};
-    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
-    all=rankFilter(all).slice(0,16);
-    var cats=['World','Politics','Business','Tech','Climate','Society','Science','Culture','Health','Finance','Sport','Europe','US','UK','Asia','Economy'];
+    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,60);if(seen[k])return false;seen[k]=true;return true;});
+    all=rankFilter(all).slice(0,12);
+    var cats=['World','Politics','Business','Tech','Climate','Society','Science','Culture','Health','Finance','Sport','Europe'];
     el.innerHTML=all.map(function(a,i){
       var dc=a.sentiment==='good'?'wdg':a.sentiment==='bad'?'wdb':'wdn';
       var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
-      var mp=a._score>=30?'<span class="match-pill" style="font-size:8px;padding:1px 5px">'+a._score+'%</span>':'';
-      return '<a class="week-item"'+href+'><div class="week-dot '+dc+'"></div><div style="flex:1;min-width:0"><div class="week-hl">'+esc(a.headline)+sentTag(a.sentiment)+mp+'</div><div class="week-meta">'+cats[i%cats.length]+' &middot; '+esc(a.source)+(a.pubDate?' &middot; '+timeAgo(a.pubDate):'')+'</div></div></a>';
+      var mp=a._score>=25?'<span class="match-pill" style="font-size:8px;padding:1px 5px">'+a._score+'%</span>':'';
+      var shortSum=sh(a.rawDesc||'').replace(/\s+/g,' ').trim();
+      shortSum=shortSum.length>160?shortSum.substring(0,160)+'…':shortSum;
+      return '<a class="week-item"'+href+'>'
+        +'<div class="week-dot '+dc+'"></div>'
+        +'<div style="flex:1;min-width:0">'
+          +'<div class="week-hl">'+esc(a.headline)+sentTag(a.sentiment)+mp+'</div>'
+          +(shortSum?'<div class="week-sum">'+esc(shortSum)+'</div>':'')
+          +'<div class="week-meta">'+cats[i%cats.length]+' · '+esc(a.source)+(a.pubDate?' · '+timeAgo(a.pubDate):'')+'</div>'
+        +'</div></a>';
     }).join('');
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load.<br><button class="retry-btn" onclick="loadWeek()">Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load this week.<br><button class="retry-btn" onclick="loadWeek()">↺ Try again</button></div>';
   }
 }
  
-var STHEMES=[{t:'Science & discovery',img:'photo-1464802686167-b939a6910659'},{t:'Nature & our planet',img:'photo-1500534314209-a25ddb2bd429'},{t:'Society & culture',img:'photo-1507003211169-0a1dd7228f2d'},{t:'Technology & the future',img:'photo-1518770660439-4636190af475'},{t:'People & ideas',img:'photo-1489710437720-ebb67ec84dd2'},{t:'Cities & architecture',img:'photo-1477959858617-67f85cf4f1df'},{t:'Food & environment',img:'photo-1504674900247-0877df9cc836'},{t:'Economics & power',img:'photo-1611974789855-9c2a0a7236a3'},{t:'Health & wellbeing',img:'photo-1505751172876-fa1923c5c528'},{t:'History & memory',img:'photo-1488646953014-85cb44e25628'}];
- 
+/* ── sunday ── */
+var STHEMES=[
+  {t:'Science & discovery',img:'photo-1464802686167-b939a6910659'},
+  {t:'Nature & our planet',img:'photo-1500534314209-a25ddb2bd429'},
+  {t:'Society & culture',img:'photo-1507003211169-0a1dd7228f2d'},
+  {t:'Technology & the future',img:'photo-1518770660439-4636190af475'},
+  {t:'People & ideas',img:'photo-1489710437720-ebb67ec84dd2'},
+  {t:'Cities & architecture',img:'photo-1477959858617-67f85cf4f1df'},
+  {t:'Food & environment',img:'photo-1504674900247-0877df9cc836'},
+  {t:'Economics & power',img:'photo-1611974789855-9c2a0a7236a3'},
+  {t:'Health & wellbeing',img:'photo-1505751172876-fa1923c5c528'},
+  {t:'History & memory',img:'photo-1488646953014-85cb44e25628'}
+];
 async function loadSunday(){
   var el=document.getElementById('sunday-body');
-  var week=Math.floor(new Date().getTime()/604800000);
+  var week=Math.floor(Date.now()/604800000);
   var theme=STHEMES[week%STHEMES.length];
   document.getElementById('sunday-img').src='https://images.unsplash.com/'+theme.img+'?w=800&q=70&auto=format&fit=crop';
   document.getElementById('sunday-hl').textContent='This week: '+theme.t;
   try{
-    var results=await Promise.allSettled(FSun.map(fetchRSS));
-    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var results=await Promise.allSettled(FSUN.map(fetchRSS));
+    var all=[];
+    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
     if(!all.length)throw new Error('empty');
     var seen={};
-    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
-    all=rankFilter(all).slice(0,7);
-    var h='<div class="sunday-read-badge">&#9632; Theme: '+esc(theme.t)+'</div><div class="sunday-intro">Every week, Daily Brief curates the most compelling reads from the world\'s best publications. Settle in with a coffee.</div>';
+    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,60);if(seen[k])return false;seen[k]=true;return true;});
+    all=rankFilter(all).slice(0,8);
+    var h='<div class="sunday-read-badge">☕ Theme this week: '+esc(theme.t)+'</div>';
+    h+='<div class="sunday-intro">Every week, Daily Brief curates the most compelling long reads. These stories reward your full attention — settle in with a coffee.</div>';
     all.forEach(function(a,i){
       var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
-      h+='<div class="sunday-sec"><div class="sunday-sec-label">Read '+(i+1)+' &middot; '+esc(a.source)+'</div><a class="sunday-sec-hl"'+href+'>'+esc(a.headline)+'</a>'+(a.summary?'<div class="sunday-sec-sum">'+esc(a.summary)+'</div>':'')+(a.link?'<a class="sunday-read-link"'+href+'>Read full story &#8594;</a>':'')+'</div>';
+      var fullSum=sh(a.rawDesc||'').replace(/\s+/g,' ').trim();
+      fullSum=fullSum.length>400?fullSum.substring(0,400)+'…':fullSum;
+      h+='<div class="sunday-sec">'
+        +'<div class="sunday-sec-label">Read '+(i+1)+' · '+esc(a.source)+'</div>'
+        +'<a class="sunday-sec-hl"'+href+'>'+esc(a.headline)+'</a>'
+        +(fullSum?'<div class="sunday-sec-sum">'+esc(fullSum)+'</div>':'')
+        +(a.link?'<a class="sunday-read-link"'+href+'>Read full story →</a>':'')
+        +'</div>';
     });
     el.innerHTML=h;
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load.<br><button class="retry-btn" onclick="loadSunday()">Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load long reads.<br><button class="retry-btn" onclick="loadSunday()">↺ Try again</button></div>';
   }
 }
  
@@ -777,12 +808,11 @@ function loadAll(){loadSection('world');loadSection('business');loadWeek();loadS
 (function(){
   var stored=sl('db_user',null);
   if(stored&&stored.user){
-    currentUser=stored.user;syncMode=stored.sync||false;
-    showMainApp();
+    currentUser=stored.user; syncMode=stored.sync||false;
+    showApp();
     if(syncMode)loadFromSupabase();
-    else{loadLocalPrefs();loadAll();}
+    else{loadLocalPrefs();trackDay();loadAll();}
   }
-  /* else show onboarding */
   document.getElementById('username-input').addEventListener('keydown',function(e){if(e.key==='Enter')startWithUsername();});
 })();
 </script>
