@@ -11,125 +11,215 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .masthead{background:#0f0f0f;padding:16px 20px 13px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .logo{font-size:26px;font-weight:700;color:#fff;font-family:Georgia,serif;letter-spacing:-0.5px}
 .logo-sub{font-size:9px;color:rgba(255,255,255,0.4);letter-spacing:2.5px;text-transform:uppercase;margin-top:2px}
-.mh-meta{text-align:right}
-.mh-date{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:0.5px}
+.mh-date{font-size:11px;color:rgba(255,255,255,0.5)}
 .mh-live{display:inline-block;margin-top:3px;font-size:9px;background:#e74c3c;color:#fff;padding:2px 7px;border-radius:20px;letter-spacing:1px;text-transform:uppercase}
-.mh-right{display:flex;gap:7px;align-items:center}
 .mh-btn{padding:5px 12px;font-size:11px;border:1px solid rgba(255,255,255,0.25);border-radius:20px;background:transparent;color:rgba(255,255,255,0.75);cursor:pointer;transition:all 0.15s}
-.mh-btn:hover,.mh-btn.on{background:rgba(255,255,255,0.15);border-color:rgba(255,255,255,0.6);color:#fff}
-.nav{display:flex;background:#1a1a1a;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mh-btn:hover{background:rgba(255,255,255,0.15);color:#fff}
+.sync-dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:4px;vertical-align:middle}
+.sync-ok{background:#2ecc71}.sync-err{background:#e74c3c}.sync-ing{background:#f39c12;animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.nav{display:flex;background:#1a1a1a;overflow-x:auto}
 .nav::-webkit-scrollbar{display:none}
-.ntab{padding:12px 18px;font-size:12px;font-weight:500;letter-spacing:0.4px;white-space:nowrap;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:all 0.18s}
+.ntab{padding:12px 18px;font-size:12px;font-weight:500;white-space:nowrap;cursor:pointer;border:none;background:transparent;color:rgba(255,255,255,0.4);border-bottom:2px solid transparent;transition:all 0.18s}
 .ntab.on{color:#fff;border-bottom:2px solid #fff}
 .ntab:hover:not(.on){color:rgba(255,255,255,0.7)}
 .panel{display:none}.panel.on{display:block}
-.section-hero{position:relative;height:160px;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
+ 
+/* onboarding */
+.onboard{padding:28px 24px;text-align:center}
+.onboard-logo{font-size:32px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:6px}
+.onboard-sub{font-size:13px;color:#888;margin-bottom:24px;line-height:1.6}
+.onboard-card{background:#faf8ff;border:1px solid #ede8ff;border-radius:14px;padding:20px;margin-bottom:16px;text-align:left}
+.onboard-step{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.onboard-step:last-child{margin-bottom:0}
+.step-num{width:24px;height:24px;border-radius:50%;background:#7c5cbf;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step-text{font-size:13px;color:#444;line-height:1.55}
+.step-text strong{color:#111}
+.onboard-input{width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;outline:none;transition:border-color 0.2s;margin-top:8px}
+.onboard-input:focus{border-color:#7c5cbf}
+.onboard-btn{width:100%;padding:12px;background:#0f0f0f;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity 0.15s;margin-top:12px}
+.onboard-btn:hover{opacity:0.85}
+.onboard-note{font-size:11px;color:#bbb;margin-top:10px;line-height:1.5}
+.onboard-divider{display:flex;align-items:center;gap:10px;margin:14px 0;color:#ccc;font-size:12px}
+.onboard-divider::before,.onboard-divider::after{content:'';flex:1;height:0.5px;background:#eee}
+.onboard-skip{font-size:12px;color:#9b59b6;cursor:pointer;text-decoration:underline}
+ 
+/* sync banner */
+.sync-banner{display:flex;align-items:center;justify-content:space-between;padding:8px 16px;background:#f0fdf4;border-bottom:0.5px solid #bbf7d0;font-size:11px;color:#166534}
+.sync-banner.error{background:#fef2f2;border-color:#fecaca;color:#991b1b}
+.sync-banner.syncing{background:#faf8ff;border-color:#ede8ff;color:#5b3fa6}
+ 
+.taste-bar{padding:10px 16px;background:#faf8ff;border-bottom:0.5px solid #ede8ff;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.taste-label{font-size:10px;font-weight:700;color:#7c5cbf;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap}
+.taste-tags{display:flex;gap:5px;flex-wrap:wrap;flex:1}
+.taste-tag{font-size:10px;padding:2px 9px;border-radius:20px;background:#ede8ff;color:#5b3fa6;font-weight:600}
+.taste-count{font-size:10px;color:#9b8abf;white-space:nowrap}
+ 
+.section-hero{position:relative;height:150px;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45}
-.hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.1) 100%)}
+.hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88),rgba(0,0,0,0.1))}
 .hero-text{position:relative;z-index:1}
 .hero-kicker{display:inline-block;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:7px}
-.hero-title{font-size:17px;font-weight:700;color:#fff;line-height:1.3;font-family:Georgia,serif}
-.hero-sub{font-size:12px;color:rgba(255,255,255,0.6);margin-top:3px}
-.feed{background:#fff;padding:0}
-.feed-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:14px 16px 10px;border-bottom:0.5px solid #f0f0f0}
-.error-box{padding:20px 16px;text-align:center;font-size:13px;color:#999}
-.retry-btn{margin-top:8px;display:inline-block;padding:6px 16px;font-size:12px;border:0.5px solid #ddd;border-radius:8px;cursor:pointer;background:transparent;color:#444}
-.art-item{display:flex;gap:0;border-bottom:0.5px solid #f0f0f0;transition:background 0.15s;cursor:pointer}
-.art-item:hover{background:#fafafa}
-.art-item:last-child{border-bottom:none}
-.art-item.lead{flex-direction:column}
-.lead-img{width:100%;height:200px;object-fit:cover;display:block}
-.lead-img-ph{width:100%;height:200px;display:flex;align-items:center;justify-content:center;font-size:48px;background:#f5f5f5}
-.lead-body{padding:14px 16px}
-.art-thumb{width:90px;height:72px;object-fit:cover;flex-shrink:0}
-.art-thumb-ph{width:90px;height:72px;display:flex;align-items:center;justify-content:center;font-size:24px;background:#f5f5f5;flex-shrink:0}
-.art-body{padding:12px 14px;flex:1;min-width:0}
-.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
-.k-good{color:#1a9e55}.k-bad{color:#c0392b}.k-neutral{color:#7c5cbf}.k-world{color:#2980b9}.k-business{color:#e67e22}
-.art-hl{font-size:14px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:4px}
-.art-hl-sm{font-size:13px;font-weight:600;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:3px}
-.art-sum{font-size:12px;color:#666;line-height:1.6;margin-bottom:6px}
-.art-meta{display:flex;align-items:center;justify-content:space-between}
-.art-src{font-size:11px;color:#bbb}
-.art-time{font-size:11px;color:#ddd}
-.act-row{display:flex;gap:4px}
-.act-btn{width:26px;height:26px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;color:#ccc;transition:all 0.15s}
-.act-btn:hover{background:#f5f5f5;color:#999}
-.act-btn.fav-on{background:#fff0f3;border-color:#d63a6a;color:#d63a6a}
-.act-btn.nope-on{background:#f5f5f5;color:#ccc}
-.sb-good{border-left:3px solid #2ecc71}.sb-bad{border-left:3px solid #e74c3c}.sb-neutral{border-left:3px solid #bbb}
+.hero-title{font-size:17px;font-weight:700;color:#fff;font-family:Georgia,serif}
+.hero-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:3px}
+.feed-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:12px 16px 8px;border-bottom:0.5px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between}
+.for-you-badge{font-size:9px;padding:2px 8px;border-radius:10px;background:#ede8ff;color:#5b3fa6;font-weight:700}
 .loading-row{padding:28px 16px;text-align:center;font-size:13px;color:#bbb}
 .spinner{width:22px;height:22px;border:2px solid #eee;border-top-color:#9b59b6;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 10px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.week-wrap{padding:0 16px 16px}
-.week-hdr{padding:14px 0 10px;border-bottom:0.5px solid #f0f0f0;margin-bottom:4px}
-.week-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif}
-.week-sub{font-size:12px;color:#bbb;margin-top:2px}
-.week-item{display:flex;gap:12px;padding:11px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;cursor:pointer}
-.week-item:last-child{border-bottom:none}
-.week-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.wdg{background:#2ecc71}.wdb{background:#e74c3c}.wdn{background:#9b59b6}
-.week-content{flex:1;min-width:0}
-.week-hl{font-size:13px;color:#111;line-height:1.45;font-weight:600}
-.week-cat{font-size:10px;color:#bbb;margin-top:2px;text-transform:uppercase;letter-spacing:0.8px}
-.week-src{font-size:11px;color:#ddd}
-.sunday-hero{position:relative;min-height:220px;display:flex;align-items:flex-end;padding:22px;overflow:hidden;background:#1a0a2e}
-.sunday-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3}
-.sunday-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,0,40,0.93) 0%,rgba(15,0,40,0.15) 100%)}
-.sunday-content{position:relative;z-index:1;width:100%}
-.sunday-pill{display:inline-block;padding:3px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;background:rgba(167,139,250,0.25);color:#c4b5fd;margin-bottom:9px;border:1px solid rgba(167,139,250,0.35)}
-.sunday-hl{font-size:20px;font-weight:700;color:#fff;line-height:1.25;font-family:Georgia,serif;margin-bottom:4px}
-.sunday-standfirst{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.5}
-.sunday-body{padding:18px 16px;background:#fff}
-.sunday-intro{font-size:15px;color:#222;line-height:1.8;font-family:Georgia,serif;margin-bottom:18px;padding-bottom:16px;border-bottom:0.5px solid #f0f0f0}
-.sunday-section{margin-bottom:18px}
-.sunday-sec-title{font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#9b59b6;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid #f5f0ff}
-.sunday-sec-body{font-size:13px;color:#444;line-height:1.8}
-.sunday-quote{border-left:3px solid #9b59b6;padding:10px 14px;margin:16px 0;background:#fdf9ff;border-radius:0 8px 8px 0}
-.sunday-quote-text{font-size:14px;color:#333;font-family:Georgia,serif;line-height:1.6;font-style:italic}
-.sunday-read-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#888;background:#f8f8f8;padding:5px 12px;border-radius:20px;margin-bottom:14px}
-.favs-wrap{padding:16px}
-.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:16px}
+.error-box{padding:24px 16px;text-align:center;font-size:13px;color:#999;line-height:1.8}
+.retry-btn{margin-top:10px;display:inline-block;padding:6px 16px;font-size:12px;border:0.5px solid #ddd;border-radius:8px;cursor:pointer;background:#fff;color:#444}
+.art-item{display:flex;border-bottom:0.5px solid #f0f0f0;transition:background 0.15s;text-decoration:none;color:inherit;position:relative}
+.art-item:hover{background:#fafafa}
+.art-item:last-child{border-bottom:none}
+.art-item.lead{flex-direction:column}
+.for-you-strip{position:absolute;top:0;left:0;right:0;height:2px;background:#a78bfa}
+.lead-img{width:100%;height:200px;object-fit:cover;display:block;background:#f5f5f5}
+.lead-body{padding:14px 16px}
+.art-thumb{width:88px;height:70px;object-fit:cover;flex-shrink:0;background:#f5f5f5}
+.art-body{padding:11px 13px;flex:1;min-width:0}
+.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.k-good{color:#1a9e55}.k-bad{color:#c0392b}.k-neutral{color:#7c5cbf}
+.match-pill{font-size:8px;padding:1px 6px;border-radius:8px;background:#ede8ff;color:#5b3fa6;font-weight:700}
+.art-hl{font-size:14px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:5px}
+.art-hl-sm{font-size:13px;font-weight:600;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:3px}
+.art-sum{font-size:12px;color:#666;line-height:1.6;margin-bottom:6px}
+.art-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px}
+.art-src{font-size:11px;color:#bbb}
+.act-row{display:flex;gap:4px}
+.act-btn{width:28px;height:28px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;color:#ccc;transition:all 0.18s}
+.act-btn:hover{background:#f5f5f5;color:#999;transform:scale(1.1)}
+.act-btn.fav-on{background:#fff0f3;border-color:#d63a6a;color:#d63a6a;transform:scale(1.15)}
+.act-btn.nope-on{background:#f5f5f5;color:#ddd}
+.sb-good{border-left:3px solid #2ecc71}
+.sb-bad{border-left:3px solid #e74c3c}
+.sb-neutral{border-left:3px solid #ddd}
+ 
+.profile-wrap{padding:16px}
+.profile-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:4px}
+.profile-sub{font-size:12px;color:#bbb;margin-bottom:18px}
+.sync-status-row{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:#f8f8f8;border-radius:10px;margin-bottom:16px}
+.sync-status-text{font-size:12px;color:#555}
+.kpi-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
 .kpi{background:#f8f8f8;border-radius:10px;padding:12px;text-align:center}
 .kpi-n{font-size:22px;font-weight:700;color:#111}
 .kpi-l{font-size:11px;color:#bbb;margin-top:2px}
-.fav-item{display:flex;gap:10px;padding:12px;background:#fff;border:0.5px solid #eee;border-radius:12px;margin-bottom:8px;align-items:flex-start;cursor:pointer}
+.profile-section{margin-bottom:20px}
+.profile-section-title{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#7c5cbf;margin-bottom:10px;padding-bottom:6px;border-bottom:1px solid #f0e8ff}
+.topic-grid{display:flex;flex-wrap:wrap;gap:7px}
+.topic-chip{padding:5px 12px;border-radius:20px;font-size:12px;font-weight:600;border:1.5px solid transparent}
+.tc-strong{background:#5b3fa6;color:#fff;border-color:#5b3fa6}
+.tc-medium{background:#ede8ff;color:#5b3fa6;border-color:#c4b5fd}
+.tc-light{background:#f8f5ff;color:#9b8abf;border-color:#e8e0ff}
+.source-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:0.5px solid #f5f5f5}
+.source-row:last-child{border-bottom:none}
+.source-name{font-size:13px;color:#111;font-weight:500}
+.source-bar-wrap{flex:1;height:5px;background:#f0f0f0;border-radius:3px;margin:0 12px}
+.source-bar{height:100%;border-radius:3px;background:#7c5cbf}
+.source-count{font-size:11px;color:#bbb;white-space:nowrap}
+.fav-item{display:flex;gap:10px;padding:12px;background:#fff;border:0.5px solid #eee;border-radius:12px;margin-bottom:8px;align-items:flex-start}
 .fav-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .fav-hl{font-size:13px;color:#111;line-height:1.4;flex:1;font-weight:500}
 .fav-src{font-size:11px;color:#bbb;margin-top:2px}
 .fav-rm{font-size:11px;color:#ccc;cursor:pointer;padding:2px 6px;border-radius:4px;flex-shrink:0}
 .fav-rm:hover{background:#f5f5f5;color:#999}
-.empty-state{text-align:center;padding:2.5rem 1rem;font-size:13px;color:#bbb;background:#f8f8f8;border-radius:12px}
-.tag{display:inline-block;font-size:9px;padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:0.5px;vertical-align:middle;margin-left:4px}
-.tag-good{background:#eafaf1;color:#1a9e55}
-.tag-bad{background:#fdeaea;color:#c0392b}
-.tag-neutral{background:#f5f0ff;color:#7c5cbf}
+.empty-state{text-align:center;padding:2.5rem 1rem;font-size:13px;color:#bbb;background:#f8f8f8;border-radius:12px;line-height:1.8}
+.sent-tag{display:inline-block;font-size:9px;padding:1px 6px;border-radius:8px;font-weight:700;margin-left:4px;vertical-align:middle}
+.st-good{background:#eafaf1;color:#1a9e55}
+.st-bad{background:#fdeaea;color:#c0392b}
+.st-neutral{background:#f5f0ff;color:#7c5cbf}
+.week-wrap{padding:16px}
+.week-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:2px}
+.week-sub{font-size:12px;color:#bbb;margin-bottom:14px}
+.week-item{display:flex;gap:12px;padding:11px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;text-decoration:none;color:inherit}
+.week-item:last-child{border-bottom:none}
+.week-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.wdg{background:#2ecc71}.wdb{background:#e74c3c}.wdn{background:#9b59b6}
+.week-hl{font-size:13px;color:#111;line-height:1.45;font-weight:600}
+.week-meta{font-size:10px;color:#bbb;margin-top:2px;text-transform:uppercase;letter-spacing:0.8px}
+.sunday-hero{position:relative;min-height:200px;display:flex;align-items:flex-end;padding:22px;overflow:hidden;background:#1a0a2e}
+.sunday-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3}
+.sunday-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,0,40,0.93),rgba(15,0,40,0.15))}
+.sunday-content{position:relative;z-index:1;width:100%}
+.sunday-pill{display:inline-block;padding:3px 12px;border-radius:20px;font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;background:rgba(167,139,250,0.25);color:#c4b5fd;margin-bottom:9px;border:1px solid rgba(167,139,250,0.35)}
+.sunday-hl{font-size:20px;font-weight:700;color:#fff;line-height:1.25;font-family:Georgia,serif}
+.sunday-body{padding:18px 16px}
+.sunday-intro{font-size:14px;color:#444;line-height:1.8;font-family:Georgia,serif;margin-bottom:16px;padding-bottom:14px;border-bottom:0.5px solid #f0f0f0}
+.sunday-read-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;color:#888;background:#f8f8f8;padding:4px 12px;border-radius:20px;margin-bottom:14px}
+.sunday-sec{margin-bottom:18px;padding-bottom:16px;border-bottom:0.5px solid #f5f5f5}
+.sunday-sec:last-child{border-bottom:none}
+.sunday-sec-label{font-size:9px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#9b59b6;margin-bottom:7px}
+.sunday-sec-hl{font-size:15px;font-weight:700;color:#111;font-family:Georgia,serif;line-height:1.35;margin-bottom:5px;text-decoration:none;display:block}
+.sunday-sec-hl:hover{color:#9b59b6}
+.sunday-sec-sum{font-size:12px;color:#666;line-height:1.7}
+.sunday-read-link{display:inline-block;margin-top:8px;font-size:12px;color:#9b59b6;font-weight:700;text-decoration:none}
+.sunday-read-link:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-<div class="app">
+<div class="app" id="app">
+ 
+<!-- ONBOARDING SCREEN -->
+<div id="onboard-screen">
+  <div style="background:#0f0f0f;padding:16px 20px 13px">
+    <div class="logo" style="color:#fff">Daily Brief</div>
+    <div class="logo-sub">Your morning intelligence</div>
+  </div>
+  <div class="onboard">
+    <div class="onboard-logo">Welcome ☕</div>
+    <div class="onboard-sub">Daily Brief learns what news you love and remembers your preferences across all your devices.</div>
+ 
+    <div class="onboard-card">
+      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:14px">How cross-device sync works</div>
+      <div class="onboard-step">
+        <div class="step-num">1</div>
+        <div class="step-text">Pick a <strong>username</strong> — anything you like, just for you to remember. No password or email needed.</div>
+      </div>
+      <div class="onboard-step">
+        <div class="step-num">2</div>
+        <div class="step-text">Every time you ❤️ or ✕ a story, your taste profile <strong>saves to the cloud instantly</strong>.</div>
+      </div>
+      <div class="onboard-step">
+        <div class="step-num">3</div>
+        <div class="step-text">Open Daily Brief on any device, <strong>enter the same username</strong> and your full taste profile loads back automatically.</div>
+      </div>
+    </div>
+ 
+    <input class="onboard-input" id="username-input" type="text" placeholder="Choose a username (e.g. sarah123)" maxlength="30" autocomplete="off" autocapitalize="off">
+    <button class="onboard-btn" onclick="startWithUsername()">Start reading &#8594;</button>
+    <div class="onboard-note">Your username is just a lookup key — no account, no email, no password. Keep it private so others can't access your preferences.</div>
+ 
+    <div class="onboard-divider">or</div>
+    <span class="onboard-skip" onclick="startAnonymous()">Continue without syncing (this device only)</span>
+  </div>
+</div>
+ 
+<!-- MAIN APP (hidden until username set) -->
+<div id="main-app" style="display:none">
  
 <div class="masthead">
   <div>
     <div class="logo">Daily Brief</div>
     <div class="logo-sub">Your morning intelligence</div>
   </div>
-  <div class="mh-meta">
-    <div class="mh-date" id="mh-date">Loading…</div>
-    <div class="mh-live">Live news</div>
+  <div style="text-align:right">
+    <div class="mh-date" id="mh-date"></div>
+    <div class="mh-live">Live</div>
   </div>
-  <div class="mh-right">
-    <button class="mh-btn" onclick="gotoTab('favs')">Saved</button>
+  <div style="display:flex;gap:7px">
+    <button class="mh-btn" onclick="gotoTab('profile')">&#127775; Taste</button>
     <button class="mh-btn" onclick="loadAll()">&#8635; Refresh</button>
   </div>
 </div>
  
+<div id="sync-banner" class="sync-banner" style="display:none"></div>
+ 
 <div class="nav">
   <button class="ntab on" onclick="gotoTab('world',this)">&#127758; World</button>
   <button class="ntab" onclick="gotoTab('business',this)">&#128200; Business</button>
-  <button class="ntab" onclick="gotoTab('sunday',this)">&#9749; Sunday read</button>
+  <button class="ntab" onclick="gotoTab('sunday',this)">&#9749; Sunday</button>
   <button class="ntab" onclick="gotoTab('week',this)">&#128337; This week</button>
-  <button class="ntab" onclick="gotoTab('favs',this)">&#9829; Saved</button>
+  <button class="ntab" onclick="gotoTab('profile',this)">&#127775; My taste</button>
 </div>
  
 <!-- WORLD -->
@@ -140,10 +230,18 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="hero-text">
       <div class="hero-kicker" style="background:rgba(138,92,246,0.85);color:#fff">World news</div>
       <div class="hero-title">Today's top world stories</div>
-      <div class="hero-sub">UK · Europe · Americas · Live from RSS feeds</div>
+      <div class="hero-sub">BBC · Guardian · Live RSS</div>
     </div>
   </div>
-  <div class="feed-label">Latest stories</div>
+  <div class="taste-bar" id="world-taste-bar" style="display:none">
+    <div class="taste-label">Your taste</div>
+    <div class="taste-tags" id="world-taste-tags"></div>
+    <div class="taste-count" id="world-taste-count"></div>
+  </div>
+  <div class="feed-label">
+    <span>Latest stories</span>
+    <span class="for-you-badge" id="world-foryou-badge" style="display:none">Ranked for you</span>
+  </div>
   <div id="world-feed"><div class="loading-row"><div class="spinner"></div>Loading live world news…</div></div>
 </div>
  
@@ -155,310 +253,538 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="hero-text">
       <div class="hero-kicker" style="background:rgba(20,184,166,0.85);color:#fff">Business</div>
       <div class="hero-title">Today's top business stories</div>
-      <div class="hero-sub">Markets · Tech · Economy · Live from RSS feeds</div>
+      <div class="hero-sub">BBC · Guardian · Live RSS</div>
     </div>
   </div>
-  <div class="feed-label">Latest stories</div>
+  <div class="taste-bar" id="business-taste-bar" style="display:none">
+    <div class="taste-label">Your taste</div>
+    <div class="taste-tags" id="business-taste-tags"></div>
+    <div class="taste-count" id="business-taste-count"></div>
+  </div>
+  <div class="feed-label">
+    <span>Latest stories</span>
+    <span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span>
+  </div>
   <div id="business-feed"><div class="loading-row"><div class="spinner"></div>Loading live business news…</div></div>
 </div>
  
-<!-- SUNDAY BIG READ -->
+<!-- SUNDAY -->
 <div id="sunday-panel" class="panel">
   <div class="sunday-hero">
     <img class="sunday-hero-bg" id="sunday-img" src="https://images.unsplash.com/photo-1464802686167-b939a6910659?w=800&q=70&auto=format&fit=crop" alt="">
     <div class="sunday-scrim"></div>
     <div class="sunday-content">
       <div class="sunday-pill">Sunday big read</div>
-      <div class="sunday-hl" id="sunday-hl">This week's deep dive</div>
-      <div class="sunday-standfirst" id="sunday-sf">Curated long reads from the world's best publications</div>
+      <div class="sunday-hl" id="sunday-hl">This week's long reads</div>
     </div>
   </div>
-  <div class="sunday-body" id="sunday-body">
-    <div class="loading-row"><div class="spinner"></div>Loading long reads…</div>
-  </div>
+  <div class="sunday-body" id="sunday-body"><div class="loading-row"><div class="spinner"></div>Loading long reads…</div></div>
 </div>
  
 <!-- THIS WEEK -->
 <div id="week-panel" class="panel">
   <div class="week-wrap">
-    <div class="week-hdr">
-      <div class="week-title">The week so far</div>
-      <div class="week-sub">Best stories from across sources — last 7 days</div>
-    </div>
-    <div id="week-feed"><div class="loading-row"><div class="spinner"></div>Loading week's highlights…</div></div>
+    <div class="week-title">The week so far</div>
+    <div class="week-sub">Top stories ranked for your taste</div>
+    <div id="week-feed"><div class="loading-row"><div class="spinner"></div>Loading week highlights…</div></div>
   </div>
 </div>
  
-<!-- FAVOURITES -->
-<div id="favs-panel" class="panel">
-  <div class="favs-wrap">
+<!-- MY TASTE -->
+<div id="profile-panel" class="panel">
+  <div class="profile-wrap">
+    <div class="profile-title">My taste profile</div>
+    <div class="profile-sub">Built from every ❤️ — synced across all your devices</div>
+    <div class="sync-status-row">
+      <div class="sync-status-text" id="sync-status-text">&#9679; Loading sync status…</div>
+      <button class="mh-btn" style="color:#555;border-color:#ddd;font-size:11px" onclick="switchUser()">Switch user</button>
+    </div>
     <div class="kpi-row">
-      <div class="kpi"><div class="kpi-n" id="kpi-f">0</div><div class="kpi-l">Saved</div></div>
-      <div class="kpi"><div class="kpi-n" id="kpi-n">0</div><div class="kpi-l">Skipped</div></div>
-      <div class="kpi"><div class="kpi-n" id="kpi-d">1</div><div class="kpi-l">Days reading</div></div>
+      <div class="kpi"><div class="kpi-n" id="kpi-liked">0</div><div class="kpi-l">Liked</div></div>
+      <div class="kpi"><div class="kpi-n" id="kpi-skipped">0</div><div class="kpi-l">Skipped</div></div>
+      <div class="kpi"><div class="kpi-n" id="kpi-days">1</div><div class="kpi-l">Days reading</div></div>
     </div>
-    <div id="favs-inner"><div class="empty-state">Heart stories you enjoy and they'll appear here.</div></div>
+    <div id="profile-topics-section" style="display:none">
+      <div class="profile-section">
+        <div class="profile-section-title">Topics you love</div>
+        <div class="topic-grid" id="profile-topics"></div>
+      </div>
+      <div class="profile-section">
+        <div class="profile-section-title">Favourite sources</div>
+        <div id="profile-sources"></div>
+      </div>
+      <div class="profile-section">
+        <div class="profile-section-title">Saved articles</div>
+        <div id="profile-favs"></div>
+      </div>
+    </div>
+    <div id="profile-empty" class="empty-state">
+      Start hearting ❤️ articles you enjoy.<br><br>
+      Daily Brief will learn your interests and rank the most relevant stories to the top — synced across every device you use.
+    </div>
   </div>
 </div>
  
-</div>
+</div><!-- end main-app -->
+</div><!-- end .app -->
  
 <script>
-var FK='db_favs5',NK='db_nopes5',DK='db_days5';
-var favs=sl(FK,[]),nopes=sl(NK,[]);
+/* ── Supabase config ── */
+var SB_URL='https://przwlzkiyikwdvnkgnqyu.supabase.co';
+var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByendsemt5aWt3ZHZua2ducXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODc3NjcsImV4cCI6MjA5MTA2Mzc2N30.dQ_VNVXvyl-X0DihGTtnPihT5WPuep1Lnea86oAoW1s';
+var SB_TABLE='preferences';
  
-function sl(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v||d;}catch(e){return d;}}
+/* ── state ── */
+var currentUser=null;
+var syncMode=false; /* false = anonymous / localStorage only */
+var favs=[], nopes=[], tasteProfile={keywords:{},sources:{},sentiments:{},total:0}, daysArr=[];
+var syncTimer=null;
+ 
+/* ── helpers ── */
+function sl(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v!=null?v:d;}catch(e){return d;}}
 function ss(k,v){try{localStorage.setItem(k,JSON.stringify(v));}catch(e){}}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function strip(s){var d=document.createElement('div');d.innerHTML=s||'';return d.textContent||'';}
-function timeAgo(dateStr){
-  try{var d=new Date(dateStr),now=new Date(),diff=Math.floor((now-d)/60000);
-  if(diff<1)return 'just now';if(diff<60)return diff+'m ago';
-  if(diff<1440)return Math.floor(diff/60)+'h ago';return Math.floor(diff/1440)+'d ago';}catch(e){return '';}
+function stripHtml(s){var d=document.createElement('div');d.innerHTML=s||'';return d.textContent||'';}
+function timeAgo(str){
+  try{var d=new Date(str),m=Math.floor((new Date()-d)/60000);
+  if(isNaN(m)||m<0)return '';
+  if(m<2)return 'just now';if(m<60)return m+'m ago';
+  if(m<1440)return Math.floor(m/60)+'h ago';
+  return Math.floor(m/1440)+'d ago';}catch(e){return '';}
 }
  
+/* ── onboarding ── */
+function startWithUsername(){
+  var u=(document.getElementById('username-input').value||'').trim().toLowerCase().replace(/[^a-z0-9_]/g,'');
+  if(!u||u.length<2){alert('Please enter a username of at least 2 characters (letters and numbers only).');return;}
+  currentUser=u;
+  syncMode=true;
+  ss('db_user','{"user":"'+u+'","sync":true}');
+  showMainApp();
+  loadFromSupabase();
+}
+ 
+function startAnonymous(){
+  currentUser='anon_'+Math.random().toString(36).substring(2,8);
+  syncMode=false;
+  ss('db_user','{"user":"'+currentUser+'","sync":false}');
+  loadLocalPrefs();
+  showMainApp();
+  loadAll();
+}
+ 
+function showMainApp(){
+  document.getElementById('onboard-screen').style.display='none';
+  document.getElementById('main-app').style.display='block';
+  initMeta();
+}
+ 
+function switchUser(){
+  if(!confirm('Switch user? Your taste profile will reload for the new username.'))return;
+  ss('db_user',null);
+  document.getElementById('onboard-screen').style.display='block';
+  document.getElementById('main-app').style.display='none';
+  document.getElementById('username-input').value='';
+}
+ 
+/* ── Supabase API ── */
+async function sbFetch(method,body){
+  var opts={method:method,headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'return=representation'}};
+  if(body)opts.body=JSON.stringify(body);
+  var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE+'?user_id=eq.'+encodeURIComponent(currentUser),opts);
+  return r;
+}
+ 
+async function loadFromSupabase(){
+  showBanner('syncing','&#9679; Loading your preferences…');
+  try{
+    var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE+'?user_id=eq.'+encodeURIComponent(currentUser),
+      {headers:{'apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY}});
+    var rows=await r.json();
+    if(rows&&rows.length>0){
+      var row=rows[0];
+      favs=row.favs||[];
+      nopes=row.nopes||[];
+      tasteProfile=row.taste||{keywords:{},sources:{},sentiments:{},total:0};
+      daysArr=row.days||[];
+      trackDay();
+      showBanner('ok','&#10003; Synced — welcome back, '+currentUser+'!');
+    }else{
+      /* new user */
+      loadLocalPrefs();
+      await saveToSupabase();
+      showBanner('ok','&#10003; New profile created for '+currentUser);
+    }
+    updateSyncStatus();
+    hideBannerAfter(3000);
+    loadAll();
+  }catch(e){
+    loadLocalPrefs();
+    showBanner('error','&#9888; Could not connect to sync — using local preferences');
+    hideBannerAfter(4000);
+    loadAll();
+  }
+}
+ 
+async function saveToSupabase(){
+  if(!syncMode)return;
+  try{
+    /* upsert */
+    var body={user_id:currentUser,favs:favs,nopes:nopes,taste:tasteProfile,days:daysArr,updated_at:new Date().toISOString()};
+    var r=await fetch(SB_URL+'/rest/v1/'+SB_TABLE,{
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SB_KEY,'Authorization':'Bearer '+SB_KEY,'Prefer':'resolution=merge-duplicates,return=minimal'},
+      body:JSON.stringify(body)
+    });
+    if(!r.ok)throw new Error('save failed');
+    updateSyncStatus();
+  }catch(e){
+    /* fail silently — preferences still work locally */
+    console.warn('Supabase save failed',e);
+  }
+}
+ 
+function scheduleSave(){
+  clearTimeout(syncTimer);
+  syncTimer=setTimeout(saveToSupabase,1500);
+}
+ 
+function loadLocalPrefs(){
+  var stored=sl('db_prefs_local',null);
+  if(stored){favs=stored.favs||[];nopes=stored.nopes||[];tasteProfile=stored.taste||{keywords:{},sources:{},sentiments:{},total:0};daysArr=stored.days||[];}
+  trackDay();
+}
+ 
+function saveLocalPrefs(){
+  ss('db_prefs_local',{favs:favs,nopes:nopes,taste:tasteProfile,days:daysArr});
+}
+ 
+function trackDay(){
+  var td=new Date().toDateString();
+  if(!daysArr.includes(td))daysArr.push(td);
+}
+ 
+/* ── sync banner ── */
+function showBanner(type,msg){
+  var b=document.getElementById('sync-banner');
+  b.style.display='flex';
+  b.className='sync-banner'+(type==='error'?' error':type==='syncing'?' syncing':'');
+  b.innerHTML=msg;
+}
+function hideBannerAfter(ms){setTimeout(function(){document.getElementById('sync-banner').style.display='none';},ms);}
+function updateSyncStatus(){
+  var el=document.getElementById('sync-status-text');
+  if(!el)return;
+  if(syncMode){
+    el.innerHTML='<span style="color:#2ecc71">&#9679;</span> Synced as <strong>'+esc(currentUser)+'</strong> — works on all devices';
+  }else{
+    el.innerHTML='<span style="color:#f39c12">&#9679;</span> Local only ('+esc(currentUser)+') — <span style="color:#9b59b6;cursor:pointer;text-decoration:underline" onclick="switchUser()">enable sync</span>';
+  }
+  document.getElementById('kpi-liked').textContent=favs.length;
+  document.getElementById('kpi-skipped').textContent=nopes.length;
+  document.getElementById('kpi-days').textContent=daysArr.length;
+}
+ 
+/* ── date ── */
 function initMeta(){
-  var d=new Date(),days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],mons=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var d=new Date();
+  var days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var mons=['January','February','March','April','May','June','July','August','September','October','November','December'];
   document.getElementById('mh-date').textContent=days[d.getDay()]+' '+d.getDate()+' '+mons[d.getMonth()]+' '+d.getFullYear();
-  var seen=sl(DK,[]),td=d.toDateString();
-  if(!seen.includes(td)){seen.push(td);ss(DK,seen);}
-  document.getElementById('kpi-d').textContent=seen.length;
 }
  
+/* ── tabs ── */
 function gotoTab(name,btn){
   document.querySelectorAll('.ntab').forEach(function(b){b.classList.remove('on');});
   document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
   if(btn)btn.classList.add('on');
-  else document.querySelectorAll('.ntab').forEach(function(t){if(t.getAttribute('onclick')&&t.getAttribute('onclick').includes("'"+name+"'"))t.classList.add('on');});
+  else document.querySelectorAll('.ntab').forEach(function(t){if((t.getAttribute('onclick')||'').indexOf("'"+name+"'")>-1)t.classList.add('on');});
   document.getElementById(name+'-panel').classList.add('on');
-  if(name==='favs')renderFavs();
+  if(name==='profile'){renderProfile();updateSyncStatus();}
 }
  
-function sentimentOf(text){
-  var t=(text||'').toLowerCase();
-  var bad=['kill','dead','crash','attack','war','crisis','flood','fire','storm','collapse','fail','loss','cut','strike','threat','conflict','surge','explosion','arrest','scandal','protest','deficit','recession','inflation','layoff','bankrupt','sanction','missile','bomb'];
-  var good=['record','growth','peace','cure','breakthrough','rise','gain','success','deal','recover','clean','safe','boost','milestone','award','launch','invest','soar','profit','summit','agree','celebrate','historic'];
-  var bs=bad.filter(function(w){return t.includes(w);}).length;
-  var gs=good.filter(function(w){return t.includes(w);}).length;
-  return gs>bs?'good':bs>gs?'bad':'neutral';
+/* ── TASTE ENGINE ── */
+var STOP={'the':1,'a':1,'an':1,'and':1,'or':1,'but':1,'in':1,'on':1,'at':1,'to':1,'for':1,'of':1,'with':1,'by':1,'from':1,'is':1,'are':1,'was':1,'were':1,'be':1,'been':1,'has':1,'have':1,'had':1,'it':1,'its':1,'this':1,'that':1,'as':1,'over':1,'up':1,'out':1,'about':1,'into':1,'after':1,'new':1,'says':1,'said':1,'will':1,'could':1,'would':1,'he':1,'she':1,'they':1,'we':1,'his':1,'her':1,'their':1,'how':1,'why':1,'what':1,'who':1,'when':1,'than':1,'more':1,'amid':1,'not':1,'can':1,'also':1,'just':1};
+ 
+function extractKw(text){
+  return (text||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>3&&!STOP[w];});
 }
  
-var PROXY='https://api.rss2json.com/v1/api.json?rss_url=';
+function learn(article,weight){
+  var p=tasteProfile;
+  p.total=(p.total||0)+1;
+  extractKw((article.headline||'')+' '+(article.summary||'')).forEach(function(w){p.keywords[w]=(p.keywords[w]||0)+weight;});
+  if(article.source)p.sources[article.source]=(p.sources[article.source]||0)+weight;
+  if(article.sentiment)p.sentiments[article.sentiment]=(p.sentiments[article.sentiment]||0)+weight;
+  saveLocalPrefs();
+  scheduleSave();
+}
  
-var FEEDS={
-  world:[
-    'https://feeds.bbci.co.uk/news/world/rss.xml',
-    'https://feeds.bbci.co.uk/news/uk/rss.xml',
-    'https://rss.reuters.com/reuters/worldNews',
-    'https://feeds.theguardian.com/theguardian/world/rss'
-  ],
-  business:[
-    'https://feeds.bbci.co.uk/news/business/rss.xml',
-    'https://rss.reuters.com/reuters/businessNews',
-    'https://feeds.theguardian.com/theguardian/business/rss',
-    'https://feeds.bbci.co.uk/news/technology/rss.xml'
-  ],
-  week:[
-    'https://feeds.bbci.co.uk/news/rss.xml',
-    'https://rss.reuters.com/reuters/topNews',
-    'https://feeds.theguardian.com/theguardian/uk/rss'
-  ]
-};
+function score(article){
+  var p=tasteProfile;
+  if(!p.total||p.total<2)return 0;
+  var s=0;
+  var kwTotal=Object.values(p.keywords).reduce(function(a,b){return a+(b>0?b:0);},0)||1;
+  extractKw((article.headline||'')+' '+(article.summary||'')).forEach(function(w){
+    if(p.keywords[w])s+=(p.keywords[w]/kwTotal)*(p.keywords[w]>0?60:30);
+  });
+  if(article.source&&p.sources[article.source]>0)s+=Math.min(p.sources[article.source]*5,20);
+  if(article.sentiment&&p.sentiments[article.sentiment]>0)s+=5;
+  return Math.min(100,Math.max(0,Math.round(s)));
+}
  
-var SUNDAY_LONG_READS=[
-  {url:'https://feeds.theguardian.com/theguardian/theguardian/rss',label:'The Guardian'},
-  {url:'https://feeds.bbci.co.uk/news/magazine/rss.xml',label:'BBC Magazine'}
-];
+function rankFilter(arts){
+  var nopeSet={};nopes.forEach(function(id){nopeSet[id]=true;});
+  return arts.filter(function(a){return !nopeSet[a.id];})
+    .map(function(a){a._score=score(a);return a;})
+    .sort(function(a,b){return b._score-a._score;});
+}
  
-async function fetchFeed(url){
-  var r=await fetch(PROXY+encodeURIComponent(url)+'&count=8');
-  var d=await r.json();
-  return (d.items||[]).map(function(item){
-    return {
-      id:item.guid||item.link||Math.random().toString(36),
-      headline:strip(item.title),
-      summary:strip(item.description).replace(/\s+/g,' ').substring(0,180).trim()+'…',
-      source:d.feed&&d.feed.title?d.feed.title.replace(' - Home','').replace(' | Reuters',''):url.includes('bbc')?'BBC News':'Reuters',
-      link:item.link,
-      pubDate:item.pubDate,
-      sentiment:sentimentOf((item.title||'')+(item.description||''))
-    };
+function getTopKw(n){
+  return Object.entries(tasteProfile.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});
+}
+ 
+function updateTasteBars(){
+  var tops=getTopKw(6);
+  ['world','business'].forEach(function(sec){
+    var bar=document.getElementById(sec+'-taste-bar');
+    var tagsEl=document.getElementById(sec+'-taste-tags');
+    var badge=document.getElementById(sec+'-foryou-badge');
+    if(!bar)return;
+    if(tops.length>0){
+      bar.style.display='flex';
+      badge.style.display='inline-block';
+      document.getElementById(sec+'-taste-count').textContent=favs.length+' liked';
+      tagsEl.innerHTML=tops.map(function(t){return '<span class="taste-tag">'+esc(t)+'</span>';}).join('');
+    }else{bar.style.display='none';badge.style.display='none';}
   });
 }
  
-async function loadSection(section){
-  var el=document.getElementById(section+'-feed');
+/* ── sentiment ── */
+function sentiment(t){
+  t=(t||'').toLowerCase();
+  var b=['kill','dead','crash','attack','war','crisis','flood','fire','storm','collapse','fail','loss','cut','strike','threat','conflict','explosion','arrest','scandal','deficit','recession','inflation','layoff','bankrupt','sanction','missile','bomb','shooting','death','murder','terror','earthquake','protest','riot','injured'];
+  var g=['record','growth','peace','cure','breakthrough','rise','gain','success','deal','recover','safe','boost','milestone','award','launch','invest','soar','profit','agree','celebrate','historic','improve','discovery','hope'];
+  var bs=b.filter(function(w){return t.indexOf(w)>-1;}).length;
+  var gs=g.filter(function(w){return t.indexOf(w)>-1;}).length;
+  return gs>bs?'good':bs>gs?'bad':'neutral';
+}
+function sentClass(s){return s==='good'?'k-good':s==='bad'?'k-bad':'k-neutral';}
+function sentLabel(s){return s==='good'?'Positive':s==='bad'?'Difficult':'Developing';}
+function sentTag(s){return '<span class="sent-tag '+(s==='good'?'st-good':s==='bad'?'st-bad':'st-neutral')+'">'+sentLabel(s)+'</span>';}
+function dotCol(s){return s==='good'?'#2ecc71':s==='bad'?'#e74c3c':'#9b59b6';}
+ 
+var IW=['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d'];
+var IB=['photo-1611974789855-9c2a0a7236a3','photo-1535320903710-d993d3d77d29','photo-1460925895917-afdab827c52f','photo-1504711434969-e33886168f5c','photo-1611532736597-de2d4265fba3','photo-1590283603385-17ffb3a7f29f'];
+function thumb(sec,i,w,h){var p=sec==='business'?IB:IW;return 'https://images.unsplash.com/'+p[i%p.length]+'?w='+w+'&h='+h+'&q=75&auto=format&fit=crop';}
+ 
+/* ── RSS ── */
+async function fetchRSS(url){
+  var r=await fetch('https://api.allorigins.win/get?url='+encodeURIComponent(url)+'&t='+Date.now());
+  if(!r.ok)throw new Error('HTTP '+r.status);
+  var json=await r.json();
+  var xml=json.contents;
+  if(!xml||xml.length<100)throw new Error('empty');
+  var doc=new DOMParser().parseFromString(xml,'text/xml');
+  var ct=doc.querySelector('channel>title');
+  var src=ct?ct.textContent.replace(/ - Home$/,'').replace(/ \| Reuters$/,'').replace(/^The Guardian/,'Guardian').trim():'';
+  return Array.from(doc.querySelectorAll('item')).map(function(item){
+    var g=function(tag){var el=item.querySelector(tag);return el?el.textContent:'';};
+    var title=stripHtml(g('title'));
+    var desc=stripHtml(g('description')).replace(/\s+/g,' ').trim();
+    var link=g('link')||g('guid');
+    return {id:link||title,headline:title,summary:desc.length>200?desc.substring(0,200)+'…':desc,source:src,link:link,pubDate:g('pubDate'),sentiment:sentiment(title+' '+desc),_score:0};
+  }).filter(function(a){return a.headline.length>5;});
+}
+ 
+var FW=['https://feeds.bbci.co.uk/news/world/rss.xml','https://feeds.bbci.co.uk/news/uk/rss.xml','https://feeds.theguardian.com/theguardian/world/rss'];
+var FB=['https://feeds.bbci.co.uk/news/business/rss.xml','https://feeds.bbci.co.uk/news/technology/rss.xml','https://feeds.theguardian.com/theguardian/business/rss'];
+var FWK=['https://feeds.bbci.co.uk/news/rss.xml','https://feeds.theguardian.com/theguardian/uk/rss'];
+var FSun=['https://feeds.theguardian.com/theguardian/theguardian/rss'];
+ 
+async function loadSection(sec){
+  var el=document.getElementById(sec+'-feed');
+  var feeds=sec==='business'?FB:FW;
   try{
-    var promises=FEEDS[section].map(fetchFeed);
-    var results=await Promise.allSettled(promises);
-    var all=[];
-    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
-    if(!all.length){el.innerHTML='<div class="error-box">Could not load stories. Check your connection.<br><button class="retry-btn" onclick="loadSection(\''+section+'\')">Try again</button></div>';return;}
+    var results=await Promise.allSettled(feeds.map(fetchRSS));
+    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    if(!all.length)throw new Error('no items');
     var seen={};
-    all=all.filter(function(a){if(!a.headline||seen[a.headline])return false;seen[a.headline]=true;return true;});
-    all=all.slice(0,10);
-    renderSection(section,all);
+    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
+    all=rankFilter(all).slice(0,12);
+    renderFeed(sec,all);
+    updateTasteBars();
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load live news.<br><button class="retry-btn" onclick="loadSection(\''+section+'\')">Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load live news.<br><br><button class="retry-btn" onclick="loadSection(\''+sec+'\')">&#8635; Try again</button></div>';
   }
 }
  
-function sentClass(s){return s==='good'?'k-good':s==='bad'?'k-bad':'k-neutral';}
-function sentLabel(s){return s==='good'?'Positive':s==='bad'?'Difficult':'Developing';}
-function sentTag(s){return '<span class="tag tag-'+s+'">'+sentLabel(s)+'</span>';}
-function dotCol(s){return s==='good'?'#2ecc71':s==='bad'?'#e74c3c':'#9b59b6';}
- 
-var SECTION_IMGS={
-  world:['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d','photo-1516738901171-8eb4fc13bd20','photo-1569163139599-0f4517e36f51'],
-  business:['photo-1611974789855-9c2a0a7236a3','photo-1535320903710-d993d3d77d29','photo-1460925895917-afdab827c52f','photo-1504711434969-e33886168f5c','photo-1611532736597-de2d4265fba3','photo-1590283603385-17ffb3a7f29f','photo-1565514020179-026b92b84bb6']
-};
- 
-function imgUrl(section,idx,w,h){
-  var pool=SECTION_IMGS[section]||SECTION_IMGS.world;
-  var id=pool[idx%pool.length];
-  return 'https://images.unsplash.com/'+id+'?w='+w+'&h='+h+'&q=75&auto=format&fit=crop';
-}
- 
-function renderSection(section,arts){
-  var el=document.getElementById(section+'-feed');
+function renderFeed(sec,arts){
+  var el=document.getElementById(sec+'-feed');
   if(!arts||!arts.length){el.innerHTML='<div class="error-box">No stories found.</div>';return;}
+  var hasProfile=tasteProfile.total>=2;
   var h='';
   arts.forEach(function(a,i){
-    var isFav=favs.some(function(f){return f.id===a.id;});
-    var isNope=nopes.includes(a.id);
-    var link=a.link?'href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
+    var iF=favs.some(function(f){return f.id===a.id;});
+    var iN=nopes.indexOf(a.id)>-1;
+    var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
+    var eid=encodeURIComponent(a.id),ehl=encodeURIComponent(a.headline),esrc=encodeURIComponent(a.source),esum=encodeURIComponent(a.summary||'');
+    var matchHtml=hasProfile&&a._score>=30?'<span class="match-pill">'+a._score+'% match</span>':'';
+    var acts='<div class="act-row" onclick="event.preventDefault();event.stopPropagation()">'
+      +'<button class="act-btn'+(iF?' fav-on':'')+'" title="Like" onclick="tFav(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+sec+'\',\''+esum+'\',this)">&#9829;</button>'
+      +'<button class="act-btn'+(iN?' nope-on':'')+'" title="Not for me" onclick="tNope(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+esum+'\',this)">&#10005;</button>'
+      +'</div>';
     if(i===0){
-      h+='<a class="art-item lead sb-'+a.sentiment+'" '+link+'>';
-      h+='<img class="lead-img" src="'+imgUrl(section,0,700,280)+'" alt="" onerror="this.style.display=\'none\'">';
-      h+='<div class="lead-body">';
-      h+='<div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+'</div>';
-      h+='<div class="art-hl">'+esc(a.headline)+'</div>';
-      h+='<div class="art-sum">'+esc(a.summary)+'</div>';
-      h+='<div class="art-meta"><span class="art-src">'+esc(a.source)+' &middot; <span style="color:#ddd">'+timeAgo(a.pubDate)+'</span></span>';
-      h+='<div class="act-row" onclick="event.preventDefault()">';
-      h+='<button class="act-btn'+(isFav?' fav-on':'')+'" onclick="toggleFav(\''+esc(a.id)+'\',\''+esc(a.headline)+'\',\''+esc(a.source)+'\',\''+a.sentiment+'\',\''+section+'\',this)">&#9829;</button>';
-      h+='<button class="act-btn'+(isNope?' nope-on':'')+'" onclick="toggleNope(\''+esc(a.id)+'\',this)">&#10005;</button>';
-      h+='</div></div></div></a>';
-    } else {
-      h+='<a class="art-item" '+link+'>';
-      h+='<img class="art-thumb" src="'+imgUrl(section,i,180,144)+'" alt="" onerror="this.style.display=\'none\'">';
-      h+='<div class="art-body">';
-      h+='<div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+' &middot; '+esc(a.source)+'</div>';
-      h+='<div class="art-hl-sm">'+esc(a.headline)+'</div>';
-      h+='<div class="art-meta"><span class="art-src" style="color:#ddd">'+timeAgo(a.pubDate)+'</span>';
-      h+='<div class="act-row" onclick="event.preventDefault()">';
-      h+='<button class="act-btn'+(isFav?' fav-on':'')+'" onclick="toggleFav(\''+esc(a.id)+'\',\''+esc(a.headline)+'\',\''+esc(a.source)+'\',\''+a.sentiment+'\',\''+section+'\',this)">&#9829;</button>';
-      h+='<button class="act-btn'+(isNope?' nope-on':'')+'" onclick="toggleNope(\''+esc(a.id)+'\',this)">&#10005;</button>';
-      h+='</div></div></div></a>';
+      h+='<a class="art-item lead sb-'+a.sentiment+'"'+href+'>'
+        +(hasProfile&&a._score>=30?'<div class="for-you-strip"></div>':'')
+        +'<img class="lead-img" src="'+thumb(sec,0,700,280)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+        +'<div class="lead-body"><div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+matchHtml+'</div>'
+        +'<div class="art-hl">'+esc(a.headline)+'</div><div class="art-sum">'+esc(a.summary)+'</div>'
+        +'<div class="art-meta"><span class="art-src">'+esc(a.source)+(a.pubDate?' &middot; '+timeAgo(a.pubDate):'')+'</span>'+acts+'</div></div></a>';
+    }else{
+      h+='<a class="art-item"'+href+'>'
+        +(hasProfile&&a._score>=40?'<div style="position:absolute;left:0;top:0;bottom:0;width:2px;background:#a78bfa"></div>':'')
+        +'<img class="art-thumb" src="'+thumb(sec,i,176,140)+'" alt="" loading="lazy" onerror="this.style.display=\'none\'">'
+        +'<div class="art-body"><div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+' &middot; '+esc(a.source)+matchHtml+'</div>'
+        +'<div class="art-hl-sm">'+esc(a.headline)+'</div>'
+        +'<div class="art-meta"><span class="art-src">'+timeAgo(a.pubDate)+'</span>'+acts+'</div></div></a>';
     }
   });
   el.innerHTML=h;
 }
  
-function toggleFav(id,headline,source,sentiment,section,btn){
+function tFav(eid,ehl,esrc,sent,sec,esum,btn){
+  var id=decodeURIComponent(eid),hl=decodeURIComponent(ehl),src=decodeURIComponent(esrc),sum=decodeURIComponent(esum||'');
   var idx=favs.findIndex(function(f){return f.id===id;});
-  if(idx===-1){favs.push({id:id,headline:headline,source:source,sentiment:sentiment,section:section});btn.classList.add('fav-on');}
-  else{favs.splice(idx,1);btn.classList.remove('fav-on');}
-  ss(FK,favs);
-  document.getElementById('kpi-f').textContent=favs.length;
+  if(idx===-1){
+    favs.push({id:id,headline:hl,source:src,sentiment:sent,section:sec,summary:sum});
+    btn.classList.add('fav-on');
+    learn({headline:hl,summary:sum,source:src,sentiment:sent},1);
+    toast('Liked! Taste profile updated ✓');
+  }else{
+    favs.splice(idx,1);btn.classList.remove('fav-on');
+    learn({headline:hl,summary:sum,source:src,sentiment:sent},-1);
+  }
+  saveLocalPrefs();scheduleSave();
+  document.getElementById('kpi-liked').textContent=favs.length;
+  updateTasteBars();
 }
  
-function toggleNope(id,btn){
+function tNope(eid,ehl,esrc,sent,esum,btn){
+  var id=decodeURIComponent(eid),hl=decodeURIComponent(ehl||''),src=decodeURIComponent(esrc||''),sum=decodeURIComponent(esum||'');
   var i=nopes.indexOf(id);
-  if(i===-1){nopes.push(id);btn.classList.add('nope-on');}
-  else{nopes.splice(i,1);btn.classList.remove('nope-on');}
-  ss(NK,nopes);
+  if(i===-1){nopes.push(id);btn.classList.add('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},-0.5);}
+  else{nopes.splice(i,1);btn.classList.remove('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},0.5);}
+  saveLocalPrefs();scheduleSave();
+  document.getElementById('kpi-skipped').textContent=nopes.length;
 }
  
-function renderFavs(){
-  document.getElementById('kpi-f').textContent=favs.length;
-  document.getElementById('kpi-n').textContent=nopes.length;
-  var el=document.getElementById('favs-inner');
-  if(!favs.length){el.innerHTML='<div class="empty-state">Heart stories you enjoy and they\'ll appear here.</div>';return;}
-  el.innerHTML=favs.map(function(f){
-    return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div><div style="flex:1"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' &middot; '+esc(f.section)+'</div></div><span class="fav-rm" onclick="removeFav(\''+esc(f.id)+'\')">remove</span></div>';
+function toast(msg){
+  var t=document.createElement('div');
+  t.textContent=msg;
+  t.style.cssText='position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#5b3fa6;color:#fff;padding:8px 18px;border-radius:20px;font-size:12px;font-weight:600;z-index:9999;opacity:0;transition:opacity 0.3s;white-space:nowrap';
+  document.body.appendChild(t);
+  setTimeout(function(){t.style.opacity='1';},10);
+  setTimeout(function(){t.style.opacity='0';setTimeout(function(){t.remove();},300);},2200);
+}
+ 
+function renderProfile(){
+  document.getElementById('kpi-liked').textContent=favs.length;
+  document.getElementById('kpi-skipped').textContent=nopes.length;
+  document.getElementById('kpi-days').textContent=daysArr.length;
+  if(!favs.length){
+    document.getElementById('profile-empty').style.display='block';
+    document.getElementById('profile-topics-section').style.display='none';
+    return;
+  }
+  document.getElementById('profile-empty').style.display='none';
+  document.getElementById('profile-topics-section').style.display='block';
+  var allKw=Object.entries(tasteProfile.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,20);
+  var maxKw=allKw.length?allKw[0][1]:1;
+  document.getElementById('profile-topics').innerHTML=allKw.map(function(e){
+    var str=e[1]/maxKw;
+    return '<span class="topic-chip '+(str>0.6?'tc-strong':str>0.3?'tc-medium':'tc-light')+'">'+esc(e[0])+'</span>';
+  }).join('');
+  var srcE=Object.entries(tasteProfile.sources||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,6);
+  var maxS=srcE.length?srcE[0][1]:1;
+  document.getElementById('profile-sources').innerHTML=srcE.map(function(e){
+    return '<div class="source-row"><span class="source-name">'+esc(e[0])+'</span><div class="source-bar-wrap"><div class="source-bar" style="width:'+Math.round(e[1]/maxS*100)+'%"></div></div><span class="source-count">'+e[1]+' liked</span></div>';
+  }).join('')||'<div style="font-size:13px;color:#bbb">Like more articles to see your top sources.</div>';
+  document.getElementById('profile-favs').innerHTML=favs.map(function(f){
+    return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div><div style="flex:1;min-width:0"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' &middot; '+esc(f.section)+'</div></div><span class="fav-rm" onclick="rmFav(\''+encodeURIComponent(f.id)+'\')">remove</span></div>';
   }).join('');
 }
  
-function removeFav(id){favs=favs.filter(function(f){return f.id!==id;});ss(FK,favs);renderFavs();}
+function rmFav(eid){
+  var id=decodeURIComponent(eid);
+  var art=favs.find(function(f){return f.id===id;});
+  if(art)learn(art,-1);
+  favs=favs.filter(function(f){return f.id!==id;});
+  saveLocalPrefs();scheduleSave();
+  renderProfile();updateTasteBars();
+}
  
 async function loadWeek(){
   var el=document.getElementById('week-feed');
   try{
-    var promises=FEEDS.week.map(fetchFeed);
-    var results=await Promise.allSettled(promises);
-    var all=[];
-    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var results=await Promise.allSettled(FWK.map(fetchRSS));
+    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    if(!all.length)throw new Error('empty');
     var seen={};
-    all=all.filter(function(a){if(!a.headline||seen[a.headline])return false;seen[a.headline]=true;return true;});
-    all=all.slice(0,15);
-    if(!all.length){el.innerHTML='<div class="error-box">Could not load week highlights.</div>';return;}
-    var cats=['World','Politics','Business','Tech','Climate','Society','Science','Culture'];
-    var h=all.map(function(a,i){
+    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
+    all=rankFilter(all).slice(0,16);
+    var cats=['World','Politics','Business','Tech','Climate','Society','Science','Culture','Health','Finance','Sport','Europe','US','UK','Asia','Economy'];
+    el.innerHTML=all.map(function(a,i){
       var dc=a.sentiment==='good'?'wdg':a.sentiment==='bad'?'wdb':'wdn';
-      var cat=cats[i%cats.length];
-      var link=a.link?'href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
-      return '<a class="week-item" '+link+' style="text-decoration:none"><div class="week-dot '+dc+'"></div><div class="week-content"><div class="week-hl">'+esc(a.headline)+sentTag(a.sentiment)+'</div><div class="week-cat">'+cat+' &middot; '+esc(a.source)+' &middot; '+timeAgo(a.pubDate)+'</div></div></a>';
+      var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
+      var mp=a._score>=30?'<span class="match-pill" style="font-size:8px;padding:1px 5px">'+a._score+'%</span>':'';
+      return '<a class="week-item"'+href+'><div class="week-dot '+dc+'"></div><div style="flex:1;min-width:0"><div class="week-hl">'+esc(a.headline)+sentTag(a.sentiment)+mp+'</div><div class="week-meta">'+cats[i%cats.length]+' &middot; '+esc(a.source)+(a.pubDate?' &middot; '+timeAgo(a.pubDate):'')+'</div></div></a>';
     }).join('');
-    el.innerHTML=h;
   }catch(e){
     el.innerHTML='<div class="error-box">Could not load.<br><button class="retry-btn" onclick="loadWeek()">Try again</button></div>';
   }
 }
  
-var SUNDAY_THEMES=[
-  {theme:'The hidden science of sleep',img:'photo-1508739773434-c26b3d09e071'},
-  {theme:'How cities are being rebuilt for climate change',img:'photo-1477959858617-67f85cf4f1df'},
-  {theme:'The psychology of why we believe conspiracy theories',img:'photo-1507003211169-0a1dd7228f2d'},
-  {theme:'The race to build the next internet',img:'photo-1518770660439-4636190af475'},
-  {theme:'Inside the world\'s most ambitious green energy projects',img:'photo-1466611653911-95081537e5b7'},
-  {theme:'How ancient trade routes still shape the modern world',img:'photo-1488646953014-85cb44e25628'},
-  {theme:'The science of happiness — what actually works',img:'photo-1489710437720-ebb67ec84dd2'},
-  {theme:'The quiet revolution in artificial food',img:'photo-1504674900247-0877df9cc836'},
-  {theme:'The last great wildernesses on Earth',img:'photo-1500534314209-a25ddb2bd429'},
-  {theme:'How the ultra-rich are reshaping the world',img:'photo-1611974789855-9c2a0a7236a3'}
-];
+var STHEMES=[{t:'Science & discovery',img:'photo-1464802686167-b939a6910659'},{t:'Nature & our planet',img:'photo-1500534314209-a25ddb2bd429'},{t:'Society & culture',img:'photo-1507003211169-0a1dd7228f2d'},{t:'Technology & the future',img:'photo-1518770660439-4636190af475'},{t:'People & ideas',img:'photo-1489710437720-ebb67ec84dd2'},{t:'Cities & architecture',img:'photo-1477959858617-67f85cf4f1df'},{t:'Food & environment',img:'photo-1504674900247-0877df9cc836'},{t:'Economics & power',img:'photo-1611974789855-9c2a0a7236a3'},{t:'Health & wellbeing',img:'photo-1505751172876-fa1923c5c528'},{t:'History & memory',img:'photo-1488646953014-85cb44e25628'}];
  
 async function loadSunday(){
   var el=document.getElementById('sunday-body');
   var week=Math.floor(new Date().getTime()/604800000);
-  var theme=SUNDAY_THEMES[week%SUNDAY_THEMES.length];
+  var theme=STHEMES[week%STHEMES.length];
   document.getElementById('sunday-img').src='https://images.unsplash.com/'+theme.img+'?w=800&q=70&auto=format&fit=crop';
-  document.getElementById('sunday-hl').textContent=theme.theme;
- 
+  document.getElementById('sunday-hl').textContent='This week: '+theme.t;
   try{
-    var promise=fetchFeed(SUNDAY_LONG_READS[0].url);
-    var items=await promise;
-    items=items.slice(0,6);
-    if(!items.length)throw new Error('empty');
-    document.getElementById('sunday-sf').textContent='A curated long read collection — click any story to read in full';
-    var h='<div class="sunday-read-badge">&#9632; This week\'s theme: '+esc(theme.theme)+'</div>';
-    h+='<div class="sunday-intro">Every Sunday, Daily Brief brings you a hand-picked selection of the most compelling long reads from the world\'s best publications. Settle in with a coffee — these are the stories worth your time.</div>';
-    items.forEach(function(a,i){
-      var link=a.link?'href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
-      h+='<div class="sunday-section">';
-      h+='<div class="sunday-sec-title">Read '+( i+1)+'  &middot;  '+esc(a.source)+'</div>';
-      h+='<a '+link+' style="text-decoration:none"><div class="art-hl" style="margin-bottom:6px;color:#111">'+esc(a.headline)+'</div></a>';
-      h+='<div class="sunday-sec-body">'+esc(a.summary)+'</div>';
-      if(a.link)h+='<a '+link+' style="display:inline-block;margin-top:8px;font-size:12px;color:#9b59b6;font-weight:600">Read full story &#8594;</a>';
-      h+='</div>';
-      if(i===2&&items.length>3){h+='<div class="sunday-quote"><div class="sunday-quote-text">"The best journalism does not just report what happened — it explains why it matters and makes you see the world differently."</div></div>';}
+    var results=await Promise.allSettled(FSun.map(fetchRSS));
+    var all=[];results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    if(!all.length)throw new Error('empty');
+    var seen={};
+    all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,50);if(seen[k])return false;seen[k]=true;return true;});
+    all=rankFilter(all).slice(0,7);
+    var h='<div class="sunday-read-badge">&#9632; Theme: '+esc(theme.t)+'</div><div class="sunday-intro">Every week, Daily Brief curates the most compelling reads from the world\'s best publications. Settle in with a coffee.</div>';
+    all.forEach(function(a,i){
+      var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
+      h+='<div class="sunday-sec"><div class="sunday-sec-label">Read '+(i+1)+' &middot; '+esc(a.source)+'</div><a class="sunday-sec-hl"'+href+'>'+esc(a.headline)+'</a>'+(a.summary?'<div class="sunday-sec-sum">'+esc(a.summary)+'</div>':'')+(a.link?'<a class="sunday-read-link"'+href+'>Read full story &#8594;</a>':'')+'</div>';
     });
     el.innerHTML=h;
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load long reads.<br><button class="retry-btn" onclick="loadSunday()">Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load.<br><button class="retry-btn" onclick="loadSunday()">Try again</button></div>';
   }
 }
  
-function loadAll(){
-  loadSection('world');
-  loadSection('business');
-  loadWeek();
-  loadSunday();
-}
+function loadAll(){loadSection('world');loadSection('business');loadWeek();loadSunday();}
  
-initMeta();
-loadAll();
+/* ── boot ── */
+(function(){
+  var stored=sl('db_user',null);
+  if(stored&&stored.user){
+    currentUser=stored.user;syncMode=stored.sync||false;
+    showMainApp();
+    if(syncMode)loadFromSupabase();
+    else{loadLocalPrefs();loadAll();}
+  }
+  /* else show onboarding */
+  document.getElementById('username-input').addEventListener('keydown',function(e){if(e.key==='Enter')startWithUsername();});
+})();
 </script>
 </body>
 </html>
