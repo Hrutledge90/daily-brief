@@ -21,8 +21,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .ntab.on{color:#fff;border-bottom:2px solid #fff}
 .ntab:hover:not(.on){color:rgba(255,255,255,0.7)}
 .panel{display:none}.panel.on{display:block}
- 
-/* onboarding */
 .onboard{padding:28px 24px;text-align:center}
 .onboard-logo{font-size:32px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:6px}
 .onboard-sub{font-size:13px;color:#888;margin-bottom:24px;line-height:1.6}
@@ -34,23 +32,20 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .step-text strong{color:#111}
 .onboard-input{width:100%;padding:10px 14px;border:1.5px solid #ddd;border-radius:10px;font-size:14px;outline:none;transition:border-color 0.2s;margin-top:8px}
 .onboard-input:focus{border-color:#7c5cbf}
-.onboard-btn{width:100%;padding:12px;background:#0f0f0f;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;transition:opacity 0.15s;margin-top:12px}
+.onboard-btn{width:100%;padding:12px;background:#0f0f0f;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;margin-top:12px}
 .onboard-btn:hover{opacity:0.85}
 .onboard-note{font-size:11px;color:#bbb;margin-top:10px;line-height:1.5}
 .onboard-divider{display:flex;align-items:center;gap:10px;margin:14px 0;color:#ccc;font-size:12px}
 .onboard-divider::before,.onboard-divider::after{content:'';flex:1;height:0.5px;background:#eee}
 .onboard-skip{font-size:12px;color:#9b59b6;cursor:pointer;text-decoration:underline}
- 
 .sync-banner{display:flex;align-items:center;padding:8px 16px;font-size:11px;color:#166534;background:#f0fdf4;border-bottom:0.5px solid #bbf7d0}
 .sync-banner.error{background:#fef2f2;border-color:#fecaca;color:#991b1b}
 .sync-banner.syncing{background:#faf8ff;border-color:#ede8ff;color:#5b3fa6}
- 
 .taste-bar{padding:9px 16px;background:#faf8ff;border-bottom:0.5px solid #ede8ff;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .taste-label{font-size:10px;font-weight:700;color:#7c5cbf;letter-spacing:0.8px;text-transform:uppercase;white-space:nowrap}
 .taste-tags{display:flex;gap:5px;flex-wrap:wrap;flex:1}
 .taste-tag{font-size:10px;padding:2px 9px;border-radius:20px;background:#ede8ff;color:#5b3fa6;font-weight:600}
 .taste-count{font-size:10px;color:#9b8abf;white-space:nowrap}
- 
 .section-hero{position:relative;height:140px;overflow:hidden;display:flex;align-items:flex-end;padding:16px}
 .hero-bg-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.45}
 .hero-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.88),rgba(0,0,0,0.1))}
@@ -60,34 +55,30 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .hero-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:2px}
 .feed-label{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#bbb;padding:11px 16px 8px;border-bottom:0.5px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between}
 .for-you-badge{font-size:9px;padding:2px 8px;border-radius:10px;background:#ede8ff;color:#5b3fa6;font-weight:700}
- 
-.loading-row{padding:28px 16px;text-align:center;font-size:13px;color:#bbb}
-.spinner{width:22px;height:22px;border:2px solid #eee;border-top-color:#9b59b6;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 10px}
+.loading-row{padding:32px 16px;text-align:center;font-size:13px;color:#999;line-height:1.8}
+.spinner{width:24px;height:24px;border:2px solid #eee;border-top-color:#9b59b6;border-radius:50%;animation:spin 0.7s linear infinite;margin:0 auto 12px}
 @keyframes spin{to{transform:rotate(360deg)}}
-.error-box{padding:24px 16px;text-align:center;font-size:13px;color:#999;line-height:1.8}
-.retry-btn{margin-top:10px;display:inline-block;padding:6px 16px;font-size:12px;border:0.5px solid #ddd;border-radius:8px;cursor:pointer;background:#fff;color:#444}
- 
-/* article cards */
+.error-box{padding:24px 16px;text-align:center;font-size:13px;color:#999;line-height:1.9;background:#fafafa;margin:12px;border-radius:12px;border:0.5px solid #f0f0f0}
+.retry-btn{display:inline-block;margin-top:10px;padding:8px 20px;font-size:12px;border:0.5px solid #ddd;border-radius:20px;cursor:pointer;background:#fff;color:#444;font-weight:600}
+.retry-btn:hover{background:#f5f5f5}
 .art-item{display:flex;flex-direction:column;border-bottom:0.5px solid #f0f0f0;text-decoration:none;color:inherit;position:relative;background:#fff;transition:background 0.15s}
 .art-item:hover{background:#fafafa}
 .art-item:last-child{border-bottom:none}
-.art-item.lead .art-img-wrap{height:200px}
-.art-img-wrap{width:100%;height:160px;overflow:hidden;position:relative}
-.art-img{width:100%;height:100%;object-fit:cover;display:block;background:#f5f5f5}
-.art-img-overlay{position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent)}
-.art-body{padding:13px 16px}
-.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;display:flex;align-items:center;gap:6px}
+.art-img-wrap{width:100%;height:180px;overflow:hidden}
+.art-img-wrap.lead{height:210px}
+.art-img{width:100%;height:100%;object-fit:cover;display:block;background:#f0f0f0}
+.art-body{padding:14px 16px}
+.kicker{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .k-good{color:#1a9e55}.k-bad{color:#c0392b}.k-neutral{color:#7c5cbf}
 .match-pill{font-size:8px;padding:1px 6px;border-radius:8px;background:#ede8ff;color:#5b3fa6;font-weight:700}
-.art-hl{font-size:15px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:8px}
-.art-summary{font-size:13px;color:#444;line-height:1.7;margin-bottom:10px}
-.art-summary p{margin-bottom:6px}
+.art-hl{font-size:15px;font-weight:700;color:#111;line-height:1.35;font-family:Georgia,serif;margin-bottom:10px}
+.art-summary{font-size:13px;color:#444;line-height:1.75;margin-bottom:10px}
+.art-summary p{margin-bottom:7px}
 .art-summary p:last-child{margin-bottom:0}
-.art-summary.loading-sum{color:#bbb;font-style:italic;font-size:12px}
-.art-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px;padding-top:8px;border-top:0.5px solid #f5f5f5}
+.art-meta{display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:0.5px solid #f5f5f5}
 .art-src{font-size:11px;color:#bbb}
 .act-row{display:flex;gap:5px}
-.act-btn{width:30px;height:30px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:14px;color:#ccc;transition:all 0.18s}
+.act-btn{width:32px;height:32px;border-radius:50%;border:0.5px solid #eee;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:15px;color:#ccc;transition:all 0.18s}
 .act-btn:hover{background:#f5f5f5;transform:scale(1.1)}
 .act-btn.fav-on{background:#fff0f3;border-color:#d63a6a;color:#d63a6a;transform:scale(1.15)}
 .act-btn.nope-on{background:#f5f5f5;color:#ddd}
@@ -95,10 +86,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .sb-bad{border-top:3px solid #e74c3c}
 .sb-neutral{border-top:3px solid #ddd}
 .for-you-strip{position:absolute;top:0;left:0;right:0;height:3px;background:#a78bfa;z-index:2}
-.read-more{display:inline-block;margin-top:4px;font-size:11px;color:#9b59b6;font-weight:600;text-decoration:none}
+.read-more{display:inline-block;margin-top:6px;font-size:12px;color:#9b59b6;font-weight:600;text-decoration:none}
 .read-more:hover{text-decoration:underline}
- 
-/* profile */
 .profile-wrap{padding:16px}
 .profile-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:4px}
 .profile-sub{font-size:12px;color:#bbb;margin-bottom:16px}
@@ -115,9 +104,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tc-strong{background:#5b3fa6;color:#fff;border-color:#5b3fa6}
 .tc-medium{background:#ede8ff;color:#5b3fa6;border-color:#c4b5fd}
 .tc-light{background:#f8f5ff;color:#9b8abf;border-color:#e8e0ff}
-.source-row{display:flex;align-items:center;justify-content:space-between;padding:8px 0;border-bottom:0.5px solid #f5f5f5}
+.source-row{display:flex;align-items:center;padding:8px 0;border-bottom:0.5px solid #f5f5f5}
 .source-row:last-child{border-bottom:none}
-.source-name{font-size:13px;color:#111;font-weight:500}
+.source-name{font-size:13px;color:#111;font-weight:500;width:120px;flex-shrink:0}
 .source-bar-wrap{flex:1;height:5px;background:#f0f0f0;border-radius:3px;margin:0 12px}
 .source-bar{height:100%;border-radius:3px;background:#7c5cbf}
 .source-count{font-size:11px;color:#bbb;white-space:nowrap}
@@ -132,18 +121,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .st-good{background:#eafaf1;color:#1a9e55}
 .st-bad{background:#fdeaea;color:#c0392b}
 .st-neutral{background:#f5f0ff;color:#7c5cbf}
- 
 .week-wrap{padding:16px}
 .week-title{font-size:18px;font-weight:700;color:#111;font-family:Georgia,serif;margin-bottom:2px}
 .week-sub{font-size:12px;color:#bbb;margin-bottom:14px}
-.week-item{display:flex;gap:12px;padding:12px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;text-decoration:none;color:inherit}
+.week-item{display:flex;gap:12px;padding:13px 0;border-bottom:0.5px solid #f5f5f5;align-items:flex-start;text-decoration:none;color:inherit}
 .week-item:last-child{border-bottom:none}
-.week-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.week-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;margin-top:4px}
 .wdg{background:#2ecc71}.wdb{background:#e74c3c}.wdn{background:#9b59b6}
-.week-hl{font-size:13px;color:#111;line-height:1.45;font-weight:600}
-.week-sum{font-size:12px;color:#666;line-height:1.6;margin-top:4px}
-.week-meta{font-size:10px;color:#bbb;margin-top:3px;text-transform:uppercase;letter-spacing:0.8px}
- 
+.week-hl{font-size:13px;color:#111;line-height:1.45;font-weight:600;margin-bottom:4px}
+.week-sum{font-size:12px;color:#666;line-height:1.6}
+.week-meta{font-size:10px;color:#bbb;margin-top:4px;text-transform:uppercase;letter-spacing:0.8px}
 .sunday-hero{position:relative;min-height:180px;display:flex;align-items:flex-end;padding:20px;overflow:hidden;background:#1a0a2e}
 .sunday-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.3}
 .sunday-scrim{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,0,40,0.93),rgba(15,0,40,0.15))}
@@ -176,19 +163,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div class="onboard-logo">Welcome ☕</div>
     <div class="onboard-sub">Daily Brief learns what news you love and remembers your preferences across all your devices — the longer you use it, the smarter it gets.</div>
     <div class="onboard-card">
-      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:14px">How it works</div>
-      <div class="onboard-step">
-        <div class="step-num">1</div>
-        <div class="step-text">Pick a <strong>username</strong> — anything you like. No password or email needed.</div>
-      </div>
-      <div class="onboard-step">
-        <div class="step-num">2</div>
-        <div class="step-text">❤️ stories you enjoy. Your taste profile <strong>saves to the cloud instantly</strong>.</div>
-      </div>
-      <div class="onboard-step">
-        <div class="step-num">3</div>
-        <div class="step-text">Open on <strong>any device</strong>, enter the same username — your full profile loads back. After a month it'll know you well.</div>
-      </div>
+      <div style="font-size:13px;font-weight:700;color:#111;margin-bottom:14px">How cross-device sync works</div>
+      <div class="onboard-step"><div class="step-num">1</div><div class="step-text">Pick a <strong>username</strong> — anything you like. No password or email needed.</div></div>
+      <div class="onboard-step"><div class="step-num">2</div><div class="step-text">❤️ stories you enjoy. Your taste profile <strong>saves to the cloud instantly</strong>.</div></div>
+      <div class="onboard-step"><div class="step-num">3</div><div class="step-text">Open on <strong>any device</strong>, enter the same username — your full profile loads back. After a month it'll know you well.</div></div>
     </div>
     <input class="onboard-input" id="username-input" type="text" placeholder="Choose a username (e.g. sarah123)" maxlength="30" autocomplete="off" autocapitalize="off">
     <button class="onboard-btn" onclick="startWithUsername()">Start reading →</button>
@@ -201,22 +179,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <!-- MAIN APP -->
 <div id="main-app" style="display:none">
   <div class="masthead">
-    <div>
-      <div class="logo">Daily Brief</div>
-      <div class="logo-sub">Your morning intelligence</div>
-    </div>
-    <div style="text-align:right">
-      <div class="mh-date" id="mh-date"></div>
-      <div class="mh-live">Live</div>
-    </div>
+    <div><div class="logo">Daily Brief</div><div class="logo-sub">Your morning intelligence</div></div>
+    <div style="text-align:right"><div class="mh-date" id="mh-date"></div><div class="mh-live">Live</div></div>
     <div style="display:flex;gap:7px">
       <button class="mh-btn" onclick="gotoTab('profile')">✦ Taste</button>
       <button class="mh-btn" onclick="loadAll()">↺ Refresh</button>
     </div>
   </div>
- 
   <div id="sync-banner" class="sync-banner" style="display:none"></div>
- 
   <div class="nav">
     <button class="ntab on" onclick="gotoTab('world',this)">🌍 World</button>
     <button class="ntab" onclick="gotoTab('business',this)">📈 Business</button>
@@ -233,7 +203,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="hero-text">
         <div class="hero-kicker" style="background:rgba(138,92,246,0.85);color:#fff">World news</div>
         <div class="hero-title">Top 10 world stories</div>
-        <div class="hero-sub">BBC · Guardian · Live with 2-paragraph summaries</div>
+        <div class="hero-sub">BBC · Guardian · With 2-paragraph summaries</div>
       </div>
     </div>
     <div class="taste-bar" id="world-taste-bar" style="display:none">
@@ -241,10 +211,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="taste-tags" id="world-taste-tags"></div>
       <div class="taste-count" id="world-taste-count"></div>
     </div>
-    <div class="feed-label">
-      <span>Latest stories</span>
-      <span class="for-you-badge" id="world-foryou-badge" style="display:none">Ranked for you</span>
-    </div>
+    <div class="feed-label"><span>Latest stories</span><span class="for-you-badge" id="world-foryou-badge" style="display:none">Ranked for you</span></div>
     <div id="world-feed"><div class="loading-row"><div class="spinner"></div>Loading world news…</div></div>
   </div>
  
@@ -256,7 +223,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="hero-text">
         <div class="hero-kicker" style="background:rgba(20,184,166,0.85);color:#fff">Business</div>
         <div class="hero-title">Top 10 business stories</div>
-        <div class="hero-sub">BBC · Guardian · Live with 2-paragraph summaries</div>
+        <div class="hero-sub">BBC · Guardian · With 2-paragraph summaries</div>
       </div>
     </div>
     <div class="taste-bar" id="business-taste-bar" style="display:none">
@@ -264,10 +231,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="taste-tags" id="business-taste-tags"></div>
       <div class="taste-count" id="business-taste-count"></div>
     </div>
-    <div class="feed-label">
-      <span>Latest stories</span>
-      <span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span>
-    </div>
+    <div class="feed-label"><span>Latest stories</span><span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span></div>
     <div id="business-feed"><div class="loading-row"><div class="spinner"></div>Loading business news…</div></div>
   </div>
  
@@ -308,24 +272,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <div class="kpi"><div class="kpi-n" id="kpi-days">1</div><div class="kpi-l">Days reading</div></div>
       </div>
       <div id="profile-topics-section" style="display:none">
-        <div class="profile-section">
-          <div class="profile-section-title">Topics you love</div>
-          <div class="topic-grid" id="profile-topics"></div>
-        </div>
-        <div class="profile-section">
-          <div class="profile-section-title">Favourite sources</div>
-          <div id="profile-sources"></div>
-        </div>
-        <div class="profile-section">
-          <div class="profile-section-title">Saved articles</div>
-          <div id="profile-favs"></div>
-        </div>
+        <div class="profile-section"><div class="profile-section-title">Topics you love</div><div class="topic-grid" id="profile-topics"></div></div>
+        <div class="profile-section"><div class="profile-section-title">Favourite sources</div><div id="profile-sources"></div></div>
+        <div class="profile-section"><div class="profile-section-title">Saved articles</div><div id="profile-favs"></div></div>
       </div>
-      <div id="profile-empty" class="empty-state">
-        Start hearting ❤️ articles you enjoy.<br><br>
-        Daily Brief will learn your interests and rank the most relevant stories to the top — synced across every device you use.<br><br>
-        <strong>After a month it will have a very accurate picture of what you love.</strong>
-      </div>
+      <div id="profile-empty" class="empty-state">Start hearting ❤️ articles you enjoy.<br><br>Daily Brief will learn your interests and rank the most relevant stories to the top — synced across every device.<br><br><strong>After a month of daily use it will have a very accurate picture of what you love.</strong></div>
     </div>
   </div>
 </div>
@@ -336,10 +287,19 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 var SB_URL='https://przwlzkiyikwdvnkgnqyu.supabase.co';
 var SB_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InByendsemt5aWt3ZHZua2ducXl1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzU0ODc3NjcsImV4cCI6MjA5MTA2Mzc2N30.dQ_VNVXvyl-X0DihGTtnPihT5WPuep1Lnea86oAoW1s';
  
+/* ── CORS proxy list — tried in order until one works ── */
+var PROXIES=[
+  function(u){return 'https://api.allorigins.win/get?url='+encodeURIComponent(u)+'&t='+Date.now();},
+  function(u){return 'https://corsproxy.io/?'+encodeURIComponent(u);},
+  function(u){return 'https://api.codetabs.com/v1/proxy?quest='+encodeURIComponent(u);},
+  function(u){return 'https://thingproxy.freeboard.io/fetch/'+u;}
+];
+ 
 /* ── state ── */
-var currentUser=null, syncMode=false;
-var favs=[], nopes=[], taste={keywords:{},sources:{},sentiments:{},total:0}, daysArr=[];
+var currentUser=null,syncMode=false;
+var favs=[],nopes=[],taste={keywords:{},sources:{},sentiments:{},total:0},daysArr=[];
 var syncTimer=null;
+var workingProxy=0; /* index of last successful proxy */
  
 /* ── utils ── */
 function sl(k,d){try{var v=JSON.parse(localStorage.getItem(k));return v!=null?v:d;}catch(e){return d;}}
@@ -354,10 +314,94 @@ function timeAgo(str){
   return Math.floor(m/1440)+'d ago';}catch(e){return '';}
 }
  
+/* ── fetch RSS through proxies with automatic fallback ── */
+async function fetchRSS(feedUrl){
+  var lastErr=null;
+  /* Try proxies starting from last known working one */
+  for(var attempt=0;attempt<PROXIES.length;attempt++){
+    var idx=(workingProxy+attempt)%PROXIES.length;
+    try{
+      var proxyUrl=PROXIES[idx](feedUrl);
+      var resp=await fetch(proxyUrl,{signal:AbortSignal.timeout(8000)});
+      if(!resp.ok) throw new Error('HTTP '+resp.status);
+      var text=await resp.text();
+      /* allorigins returns JSON wrapper; others return raw XML */
+      var xml=text;
+      if(text.trim().startsWith('{')){
+        try{var j=JSON.parse(text);xml=j.contents||j.data||text;}catch(e){}
+      }
+      if(!xml||xml.length<200||xml.indexOf('<item')===-1) throw new Error('no items in response');
+      workingProxy=idx; /* remember which proxy worked */
+      return parseRSS(xml,feedUrl);
+    }catch(e){lastErr=e;}
+  }
+  throw lastErr||new Error('all proxies failed for '+feedUrl);
+}
+ 
+function parseRSS(xml,feedUrl){
+  var doc=new DOMParser().parseFromString(xml,'text/xml');
+  /* check for parse error */
+  if(doc.querySelector('parsererror')) throw new Error('XML parse error');
+  var ct=doc.querySelector('channel > title');
+  var src=ct?ct.textContent.replace(/ - Home$/,'').replace(/ \| Reuters$/,'').replace(/^The Guardian$/,'Guardian').replace(/BBC News - /,'BBC ').trim():'News';
+  var items=Array.from(doc.querySelectorAll('item'));
+  if(!items.length) throw new Error('no items');
+  return items.map(function(item){
+    var g=function(sel){
+      var el=item.querySelector(sel);
+      if(el) return el.textContent.trim();
+      /* try namespace variants */
+      var ns=['media:description','content:encoded','description'];
+      for(var i=0;i<ns.length;i++){var e2=item.querySelector(ns[i]);if(e2)return e2.textContent.trim();}
+      return '';
+    };
+    var title=sh(g('title'));
+    var rawDesc=g('description')||g('content\\:encoded')||'';
+    var link=g('link')||g('guid');
+    var pub=g('pubDate')||g('dc\\:date')||'';
+    if(!title||title.length<4) return null;
+    return {
+      id:(link||title).substring(0,150),
+      headline:title,
+      rawDesc:rawDesc,
+      summary:makeSummary(rawDesc),
+      source:src,
+      link:link,
+      pubDate:pub,
+      sentiment:sentiment(title+' '+sh(rawDesc)),
+      _score:0
+    };
+  }).filter(Boolean);
+}
+ 
+function makeSummary(raw){
+  var clean=sh(raw).replace(/\s+/g,' ').trim();
+  if(!clean||clean.length<30) return '';
+  /* Try to split into 2 natural paragraphs at sentence boundary */
+  var sentences=clean.match(/[^.!?]+[.!?](\s|$)/g)||[];
+  if(sentences.length>=4){
+    var half=Math.ceil(sentences.length/2);
+    var p1=sentences.slice(0,half).join('').trim();
+    var p2=sentences.slice(half).join('').trim();
+    if(p1&&p2) return '<p>'+esc(p1)+'</p><p>'+esc(p2)+'</p>';
+  }
+  if(sentences.length>=2){
+    var mid=Math.ceil(sentences.length/2);
+    return '<p>'+esc(sentences.slice(0,mid).join('').trim())+'</p><p>'+esc(sentences.slice(mid).join('').trim())+'</p>';
+  }
+  /* Fallback: split at midpoint word */
+  if(clean.length>120){
+    var half2=Math.floor(clean.length/2);
+    var sp=clean.indexOf(' ',half2);
+    if(sp>-1) return '<p>'+esc(clean.substring(0,sp))+'</p><p>'+esc(clean.substring(sp+1))+'</p>';
+  }
+  return '<p>'+esc(clean)+'</p>';
+}
+ 
 /* ── onboarding ── */
 function startWithUsername(){
   var u=(document.getElementById('username-input').value||'').trim().toLowerCase().replace(/[^a-z0-9_]/g,'');
-  if(!u||u.length<2){alert('Please enter a username of at least 2 characters.');return;}
+  if(!u||u.length<2){alert('Please enter a username of at least 2 characters (letters/numbers only).');return;}
   currentUser=u; syncMode=true;
   ss('db_user',{user:u,sync:true});
   showApp(); loadFromSupabase();
@@ -366,7 +410,7 @@ function startAnonymous(){
   currentUser='local_'+Math.random().toString(36).substring(2,8);
   syncMode=false;
   ss('db_user',{user:currentUser,sync:false});
-  loadLocalPrefs(); showApp(); loadAll();
+  loadLocalPrefs(); trackDay(); showApp(); loadAll();
 }
 function showApp(){
   document.getElementById('onboard-screen').style.display='none';
@@ -381,7 +425,7 @@ function switchUser(){
   document.getElementById('username-input').value='';
 }
  
-/* ── Supabase sync ── */
+/* ── Supabase ── */
 async function loadFromSupabase(){
   showBanner('syncing','⬤ Loading your preferences…');
   try{
@@ -393,19 +437,13 @@ async function loadFromSupabase(){
       favs=row.favs||[]; nopes=row.nopes||[];
       taste=row.taste||{keywords:{},sources:{},sentiments:{},total:0};
       daysArr=row.days||[];
-    } else {
-      loadLocalPrefs();
-      await saveToSupabase();
-    }
-    trackDay();
-    showBanner('ok','✓ Synced — welcome back, '+currentUser+'!');
-    hideBanner(3000);
-    updateSyncStatus(); loadAll();
+    }else{loadLocalPrefs();await saveToSupabase();}
+    trackDay(); showBanner('ok','✓ Synced — welcome back, '+currentUser+'!');
+    hideBanner(3000); updateSyncStatus(); loadAll();
   }catch(e){
     loadLocalPrefs(); trackDay();
-    showBanner('error','⚠ Could not connect — using local preferences');
-    hideBanner(4000);
-    loadAll();
+    showBanner('error','⚠ Could not connect to sync — using local preferences');
+    hideBanner(4000); loadAll();
   }
 }
 async function saveToSupabase(){
@@ -420,20 +458,13 @@ async function saveToSupabase(){
   }catch(e){console.warn('Sync save failed',e);}
 }
 function scheduleSave(){clearTimeout(syncTimer);syncTimer=setTimeout(saveToSupabase,1500);}
-function loadLocalPrefs(){
-  var s=sl('db_local_prefs',null);
-  if(s){favs=s.favs||[];nopes=s.nopes||[];taste=s.taste||{keywords:{},sources:{},sentiments:{},total:0};daysArr=s.days||[];}
-}
-function saveLocalPrefs(){ss('db_local_prefs',{favs:favs,nopes:nopes,taste:taste,days:daysArr});}
+function loadLocalPrefs(){var s=sl('db_local',null);if(s){favs=s.favs||[];nopes=s.nopes||[];taste=s.taste||{keywords:{},sources:{},sentiments:{},total:0};daysArr=s.days||[];}}
+function saveLocalPrefs(){ss('db_local',{favs:favs,nopes:nopes,taste:taste,days:daysArr});}
 function trackDay(){var td=new Date().toDateString();if(!daysArr.includes(td))daysArr.push(td);}
-function showBanner(type,msg){
-  var b=document.getElementById('sync-banner');
-  b.style.display='flex'; b.className='sync-banner'+(type==='error'?' error':type==='syncing'?' syncing':'');
-  b.textContent=msg;
-}
+function showBanner(type,msg){var b=document.getElementById('sync-banner');b.style.display='flex';b.className='sync-banner'+(type==='error'?' error':type==='syncing'?' syncing':'');b.textContent=msg;}
 function hideBanner(ms){setTimeout(function(){document.getElementById('sync-banner').style.display='none';},ms);}
 function updateSyncStatus(){
-  var el=document.getElementById('sync-status-text'); if(!el)return;
+  var el=document.getElementById('sync-status-text');if(!el)return;
   el.innerHTML=syncMode
     ?'<span style="color:#2ecc71">⬤</span> Synced as <strong>'+esc(currentUser)+'</strong> — works on all devices'
     :'<span style="color:#f39c12">⬤</span> Local only — <span style="color:#9b59b6;cursor:pointer;text-decoration:underline" onclick="switchUser()">enable sync</span>';
@@ -442,15 +473,13 @@ function updateSyncStatus(){
   document.getElementById('kpi-days').textContent=daysArr.length;
 }
  
-/* ── meta ── */
+/* ── meta / tabs ── */
 function initMeta(){
   var d=new Date();
   var D=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
   var M=['January','February','March','April','May','June','July','August','September','October','November','December'];
   document.getElementById('mh-date').textContent=D[d.getDay()]+' '+d.getDate()+' '+M[d.getMonth()]+' '+d.getFullYear();
 }
- 
-/* ── tabs ── */
 function gotoTab(name,btn){
   document.querySelectorAll('.ntab').forEach(function(b){b.classList.remove('on');});
   document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('on');});
@@ -461,18 +490,18 @@ function gotoTab(name,btn){
 }
  
 /* ── taste engine ── */
-var STOP={the:1,a:1,an:1,and:1,or:1,but:1,in:1,on:1,at:1,to:1,for:1,of:1,with:1,by:1,from:1,is:1,are:1,was:1,were:1,be:1,been:1,has:1,have:1,had:1,it:1,its:1,this:1,that:1,as:1,over:1,up:1,out:1,about:1,into:1,after:1,new:1,says:1,said:1,will:1,could:1,would:1,he:1,she:1,they:1,we:1,his:1,her:1,their:1,how:1,why:1,what:1,who:1,when:1,than:1,more:1,amid:1,not:1,can:1,also:1,just:1,one:1,two:1,three:1};
+var STOP={the:1,a:1,an:1,and:1,or:1,but:1,in:1,on:1,at:1,to:1,for:1,of:1,with:1,by:1,from:1,is:1,are:1,was:1,were:1,be:1,been:1,has:1,have:1,had:1,it:1,its:1,this:1,that:1,as:1,over:1,up:1,out:1,about:1,into:1,after:1,new:1,says:1,said:1,will:1,could:1,would:1,he:1,she:1,they:1,we:1,his:1,her:1,their:1,how:1,why:1,what:1,who:1,when:1,than:1,more:1,amid:1,not:1,can:1,also:1,just:1,one:1,two:1,three:1,its:1};
 function xKw(t){return (t||'').toLowerCase().replace(/[^a-z0-9\s]/g,' ').split(/\s+/).filter(function(w){return w.length>3&&!STOP[w];});}
 function learn(art,w){
   taste.total=(taste.total||0)+1;
   xKw((art.headline||'')+' '+(art.summary||'')).forEach(function(k){taste.keywords[k]=(taste.keywords[k]||0)+w;});
   if(art.source)taste.sources[art.source]=(taste.sources[art.source]||0)+w;
   if(art.sentiment)taste.sentiments[art.sentiment]=(taste.sentiments[art.sentiment]||0)+w;
-  saveLocalPrefs(); scheduleSave();
+  saveLocalPrefs();scheduleSave();
 }
 function scoreArt(art){
   if(!taste.total||taste.total<2)return 0;
-  var s=0, tot=Object.values(taste.keywords).reduce(function(a,b){return a+(b>0?b:0);},0)||1;
+  var s=0,tot=Object.values(taste.keywords).reduce(function(a,b){return a+(b>0?b:0);},0)||1;
   xKw((art.headline||'')+' '+(art.summary||'')).forEach(function(k){if(taste.keywords[k])s+=(taste.keywords[k]/tot)*(taste.keywords[k]>0?60:30);});
   if(art.source&&taste.sources[art.source]>0)s+=Math.min(taste.sources[art.source]*5,20);
   if(art.sentiment&&taste.sentiments[art.sentiment]>0)s+=5;
@@ -482,9 +511,7 @@ function rankFilter(arts){
   var ns={};nopes.forEach(function(id){ns[id]=true;});
   return arts.filter(function(a){return !ns[a.id];}).map(function(a){a._score=scoreArt(a);return a;}).sort(function(a,b){return b._score-a._score;});
 }
-function topKw(n){
-  return Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});
-}
+function topKw(n){return Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});}
 function updateTasteBars(){
   var tops=topKw(6);
   ['world','business'].forEach(function(sec){
@@ -492,7 +519,7 @@ function updateTasteBars(){
     var badge=document.getElementById(sec+'-foryou-badge');
     if(!bar)return;
     if(tops.length){
-      bar.style.display='flex'; badge.style.display='inline-block';
+      bar.style.display='flex';badge.style.display='inline-block';
       document.getElementById(sec+'-taste-count').textContent=favs.length+' liked';
       document.getElementById(sec+'-taste-tags').innerHTML=tops.map(function(t){return '<span class="taste-tag">'+esc(t)+'</span>';}).join('');
     }else{bar.style.display='none';badge.style.display='none';}
@@ -513,111 +540,51 @@ function sentLabel(s){return s==='good'?'Positive':s==='bad'?'Difficult':'Develo
 function sentTag(s){return '<span class="sent-tag '+(s==='good'?'st-good':s==='bad'?'st-bad':'st-neutral')+'">'+sentLabel(s)+'</span>';}
 function dotCol(s){return s==='good'?'#2ecc71':s==='bad'?'#e74c3c':'#9b59b6';}
  
-/* ── summariser ── */
-function buildSummary(desc){
-  /* Split raw RSS description into 2 clean paragraphs */
-  var clean=sh(desc).replace(/\s+/g,' ').trim();
-  if(!clean||clean.length<40)return '';
-  /* Try to split at sentence boundary near midpoint */
-  var sentences=clean.match(/[^.!?]+[.!?]+/g)||[clean];
-  if(sentences.length<=1){
-    /* Just split at word near midpoint */
-    var mid=Math.floor(clean.length/2);
-    var space=clean.indexOf(' ',mid);
-    if(space>-1&&space<clean.length-20){
-      return '<p>'+esc(clean.substring(0,space).trim())+'</p><p>'+esc(clean.substring(space).trim())+'</p>';
-    }
-    return '<p>'+esc(clean)+'</p>';
-  }
-  var half=Math.ceil(sentences.length/2);
-  var p1=sentences.slice(0,half).join('').trim();
-  var p2=sentences.slice(half).join('').trim();
-  if(!p2)return '<p>'+esc(p1)+'</p>';
-  return '<p>'+esc(p1)+'</p><p>'+esc(p2)+'</p>';
-}
- 
 /* ── images ── */
-var IW=['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d','photo-1516738901171-8eb4fc13bd20','photo-1569163139599-0f4517e36f51','photo-1504711434969-e33886168f5c','photo-1480099225005-2513c8947f34'];
+var IW=['photo-1529107386315-e1a2ed48a620','photo-1451187580459-43490279c0fa','photo-1526778548025-fa2f459cd5c1','photo-1488646953014-85cb44e25628','photo-1521295121783-8a321d551ad2','photo-1507003211169-0a1dd7228f2d','photo-1516738901171-8eb4fc13bd20','photo-1569163139599-0f4517e36f51','photo-1480099225005-2513c8947f34','photo-1434626881859-194d67b2b86f'];
 var IB=['photo-1611974789855-9c2a0a7236a3','photo-1535320903710-d993d3d77d29','photo-1460925895917-afdab827c52f','photo-1504711434969-e33886168f5c','photo-1611532736597-de2d4265fba3','photo-1590283603385-17ffb3a7f29f','photo-1559526324-593bc073d938','photo-1434626881859-194d67b2b86f','photo-1579621970563-ebec7560ff3e','photo-1551288049-bebda4e38f71'];
 function thumb(sec,i,w,h){var p=sec==='business'?IB:IW;return 'https://images.unsplash.com/'+p[i%p.length]+'?w='+w+'&h='+h+'&q=75&auto=format&fit=crop';}
  
-/* ── RSS ── */
-async function fetchRSS(url){
-  var proxy='https://api.allorigins.win/get?url='+encodeURIComponent(url)+'&t='+Date.now();
-  var resp=await fetch(proxy,{cache:'no-store'});
-  if(!resp.ok)throw new Error('HTTP '+resp.status);
-  var json=await resp.json();
-  var xml=json.contents;
-  if(!xml||xml.length<200)throw new Error('empty');
-  var doc=new DOMParser().parseFromString(xml,'text/xml');
-  var ct=doc.querySelector('channel > title');
-  var src=ct?ct.textContent.replace(/ - Home$/,'').replace(/ \| Reuters$/,'').replace(/^The Guardian$/,'Guardian').trim():'News';
-  return Array.from(doc.querySelectorAll('item')).map(function(item){
-    var g=function(sel){var el=item.querySelector(sel);return el?el.textContent.trim():'';};
-    var title=sh(g('title'));
-    var rawDesc=g('description')||g('summary')||'';
-    var link=g('link')||g('guid');
-    var pub=g('pubDate')||g('published');
-    return {
-      id:(link||title).substring(0,120),
-      headline:title,
-      rawDesc:rawDesc,
-      summary:buildSummary(rawDesc),
-      source:src,
-      link:link,
-      pubDate:pub,
-      sentiment:sentiment(title+' '+sh(rawDesc)),
-      _score:0
-    };
-  }).filter(function(a){return a.headline&&a.headline.length>5;});
-}
+/* ── feed URLs ── */
+var FW=['https://feeds.bbci.co.uk/news/world/rss.xml','https://feeds.bbci.co.uk/news/uk/rss.xml','https://feeds.theguardian.com/theguardian/world/rss','https://feeds.theguardian.com/theguardian/uk/rss'];
+var FB=['https://feeds.bbci.co.uk/news/business/rss.xml','https://feeds.bbci.co.uk/news/technology/rss.xml','https://feeds.theguardian.com/theguardian/business/rss','https://feeds.theguardian.com/theguardian/technology/rss'];
+var FWEEK=['https://feeds.bbci.co.uk/news/rss.xml','https://feeds.bbci.co.uk/news/world/rss.xml','https://feeds.theguardian.com/theguardian/uk/rss'];
+var FSUN=['https://feeds.theguardian.com/theguardian/theguardian/rss','https://feeds.bbci.co.uk/news/magazine/rss.xml'];
  
-/* ── RSS feed URLs — tested working ── */
-var FW=[
-  'https://feeds.bbci.co.uk/news/world/rss.xml',
-  'https://feeds.bbci.co.uk/news/uk/rss.xml',
-  'https://feeds.theguardian.com/theguardian/world/rss',
-  'https://feeds.theguardian.com/theguardian/uk/rss'
-];
-var FB=[
-  'https://feeds.bbci.co.uk/news/business/rss.xml',
-  'https://feeds.bbci.co.uk/news/technology/rss.xml',
-  'https://feeds.theguardian.com/theguardian/business/rss',
-  'https://feeds.theguardian.com/theguardian/technology/rss'
-];
-var FWEEK=[
-  'https://feeds.bbci.co.uk/news/rss.xml',
-  'https://feeds.bbci.co.uk/news/world/rss.xml',
-  'https://feeds.theguardian.com/theguardian/uk/rss'
-];
-var FSUN=[
-  'https://feeds.theguardian.com/theguardian/theguardian/rss',
-  'https://feeds.bbci.co.uk/news/magazine/rss.xml'
-];
- 
+/* ── load section ── */
 async function loadSection(sec){
   var el=document.getElementById(sec+'-feed');
   var feeds=sec==='business'?FB:FW;
   try{
+    /* fetch all feeds in parallel, keep whatever succeeds */
     var results=await Promise.allSettled(feeds.map(fetchRSS));
     var all=[];
-    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
-    if(!all.length)throw new Error('no items');
-    /* dedupe by headline */
+    results.forEach(function(r){if(r.status==='fulfilled'&&r.value)all=all.concat(r.value);});
+    if(!all.length){
+      /* if all failed, show informative error */
+      throw new Error('all feeds failed');
+    }
+    /* dedupe */
     var seen={};
     all=all.filter(function(a){
       var k=a.headline.toLowerCase().substring(0,60);
-      if(seen[k])return false; seen[k]=true; return true;
+      if(seen[k])return false;seen[k]=true;return true;
     });
-    /* rank + limit to 10 */
+    /* rank + top 10 */
     all=rankFilter(all).slice(0,10);
     renderFeed(sec,all);
     updateTasteBars();
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load news right now.<br><br><button class="retry-btn" onclick="loadSection(\''+sec+'\')">↺ Try again</button></div>';
+    el.innerHTML='<div class="error-box">'
+      +'<strong>Could not load news right now</strong><br><br>'
+      +'This is usually a temporary network issue with the news proxy service.<br>'
+      +'Please wait a moment and try again.<br><br>'
+      +'<button class="retry-btn" onclick="loadSection(\''+sec+'\')">↺ Try again</button>'
+      +'</div>';
   }
 }
  
+/* ── render feed ── */
 function renderFeed(sec,arts){
   var el=document.getElementById(sec+'-feed');
   if(!arts||!arts.length){el.innerHTML='<div class="error-box">No stories found.</div>';return;}
@@ -634,16 +601,16 @@ function renderFeed(sec,arts){
     var matchPill=hasProfile&&a._score>=25?'<span class="match-pill">'+a._score+'% match</span>':'';
     var foryouStrip=hasProfile&&a._score>=35?'<div class="for-you-strip"></div>':'';
     var acts='<div class="act-row" onclick="event.preventDefault();event.stopPropagation()">'
-      +'<button class="act-btn'+(iF?' fav-on':'')+'" title="Like this story" onclick="tFav(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+sec+'\',\''+esum+'\',this)">♥</button>'
+      +'<button class="act-btn'+(iF?' fav-on':'')+'" title="Like" onclick="tFav(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+sec+'\',\''+esum+'\',this)">♥</button>'
       +'<button class="act-btn'+(iN?' nope-on':'')+'" title="Not for me" onclick="tNope(\''+eid+'\',\''+ehl+'\',\''+esrc+'\',\''+a.sentiment+'\',\''+esum+'\',this)">✕</button>'
       +'</div>';
     h+='<div class="art-item sb-'+a.sentiment+'">'
       +foryouStrip
-      +'<div class="art-img-wrap'+(i===0?' lead':'')+'"><img class="art-img" src="'+thumb(sec,i,700,i===0?280:200)+'" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>'
+      +'<div class="art-img-wrap'+(i===0?' lead':'')+'"><img class="art-img" src="'+thumb(sec,i,700,i===0?280:220)+'" alt="" loading="lazy" onerror="this.parentElement.style.display=\'none\'"></div>'
       +'<div class="art-body">'
         +'<div class="kicker '+sentClass(a.sentiment)+'">'+sentLabel(a.sentiment)+(a.pubDate?' · <span style="color:#bbb;font-weight:400">'+timeAgo(a.pubDate)+'</span>':'')+matchPill+'</div>'
         +'<div class="art-hl">'+esc(a.headline)+'</div>'
-        +(a.summary?'<div class="art-summary">'+a.summary+'</div>':'')
+        +(a.summary?'<div class="art-summary">'+a.summary+'</div>':'<div class="art-summary" style="color:#bbb;font-style:italic;font-size:12px">Summary not available for this article.</div>')
         +'<div class="art-meta"><span class="art-src">'+esc(a.source)+'</span>'+acts+'</div>'
         +(a.link?'<a class="read-more" href="'+esc(a.link)+'" target="_blank" rel="noopener">Read full article →</a>':'')
       +'</div></div>';
@@ -661,10 +628,10 @@ function tFav(eid,ehl,esrc,sent,sec,esum,btn){
     learn({headline:hl,summary:sum,source:src,sentiment:sent},1);
     toast('Liked! Taste profile updated ✓');
   }else{
-    favs.splice(idx,1); btn.classList.remove('fav-on');
+    favs.splice(idx,1);btn.classList.remove('fav-on');
     learn({headline:hl,summary:sum,source:src,sentiment:sent},-1);
   }
-  saveLocalPrefs(); scheduleSave();
+  saveLocalPrefs();scheduleSave();
   document.getElementById('kpi-liked').textContent=favs.length;
   updateTasteBars();
 }
@@ -673,7 +640,7 @@ function tNope(eid,ehl,esrc,sent,esum,btn){
   var i=nopes.indexOf(id);
   if(i===-1){nopes.push(id);btn.classList.add('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},-0.5);}
   else{nopes.splice(i,1);btn.classList.remove('nope-on');learn({headline:hl,summary:sum,source:src,sentiment:sent},0.5);}
-  saveLocalPrefs(); scheduleSave();
+  saveLocalPrefs();scheduleSave();
   document.getElementById('kpi-skipped').textContent=nopes.length;
 }
  
@@ -701,28 +668,19 @@ function renderProfile(){
   document.getElementById('profile-topics-section').style.display='block';
   var allKw=Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,20);
   var maxKw=allKw.length?allKw[0][1]:1;
-  document.getElementById('profile-topics').innerHTML=allKw.map(function(e){
-    var str=e[1]/maxKw;
-    return '<span class="topic-chip '+(str>0.6?'tc-strong':str>0.3?'tc-medium':'tc-light')+'">'+esc(e[0])+'</span>';
-  }).join('');
+  document.getElementById('profile-topics').innerHTML=allKw.map(function(e){var str=e[1]/maxKw;return '<span class="topic-chip '+(str>0.6?'tc-strong':str>0.3?'tc-medium':'tc-light')+'">'+esc(e[0])+'</span>';}).join('');
   var srcE=Object.entries(taste.sources||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,6);
   var maxS=srcE.length?srcE[0][1]:1;
-  document.getElementById('profile-sources').innerHTML=srcE.map(function(e){
-    return '<div class="source-row"><span class="source-name">'+esc(e[0])+'</span><div class="source-bar-wrap"><div class="source-bar" style="width:'+Math.round(e[1]/maxS*100)+'%"></div></div><span class="source-count">'+e[1]+' liked</span></div>';
-  }).join('')||'<div style="font-size:13px;color:#bbb">Like more articles to see your favourite sources.</div>';
-  document.getElementById('profile-favs').innerHTML=favs.map(function(f){
-    return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div>'
-      +'<div style="flex:1;min-width:0"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' · '+esc(f.section)+'</div></div>'
-      +'<span class="fav-rm" onclick="rmFav(\''+encodeURIComponent(f.id)+'\')">remove</span></div>';
-  }).join('');
+  document.getElementById('profile-sources').innerHTML=srcE.map(function(e){return '<div class="source-row"><span class="source-name">'+esc(e[0])+'</span><div class="source-bar-wrap"><div class="source-bar" style="width:'+Math.round(e[1]/maxS*100)+'%"></div></div><span class="source-count">'+e[1]+' liked</span></div>';}).join('')||'<div style="font-size:13px;color:#bbb">Like more articles to see your favourite sources.</div>';
+  document.getElementById('profile-favs').innerHTML=favs.map(function(f){return '<div class="fav-item"><div class="fav-dot" style="background:'+dotCol(f.sentiment)+'"></div><div style="flex:1;min-width:0"><div class="fav-hl">'+esc(f.headline)+'</div><div class="fav-src">'+esc(f.source)+' · '+esc(f.section)+'</div></div><span class="fav-rm" onclick="rmFav(\''+encodeURIComponent(f.id)+'\')">remove</span></div>';}).join('');
 }
 function rmFav(eid){
   var id=decodeURIComponent(eid);
   var art=favs.find(function(f){return f.id===id;});
   if(art)learn(art,-1);
   favs=favs.filter(function(f){return f.id!==id;});
-  saveLocalPrefs(); scheduleSave();
-  renderProfile(); updateTasteBars();
+  saveLocalPrefs();scheduleSave();
+  renderProfile();updateTasteBars();
 }
  
 /* ── this week ── */
@@ -730,8 +688,7 @@ async function loadWeek(){
   var el=document.getElementById('week-feed');
   try{
     var results=await Promise.allSettled(FWEEK.map(fetchRSS));
-    var all=[];
-    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var all=[];results.forEach(function(r){if(r.status==='fulfilled'&&r.value)all=all.concat(r.value);});
     if(!all.length)throw new Error('empty');
     var seen={};
     all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,60);if(seen[k])return false;seen[k]=true;return true;});
@@ -742,7 +699,7 @@ async function loadWeek(){
       var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
       var mp=a._score>=25?'<span class="match-pill" style="font-size:8px;padding:1px 5px">'+a._score+'%</span>':'';
       var shortSum=sh(a.rawDesc||'').replace(/\s+/g,' ').trim();
-      shortSum=shortSum.length>160?shortSum.substring(0,160)+'…':shortSum;
+      shortSum=shortSum.length>180?shortSum.substring(0,180)+'…':shortSum;
       return '<a class="week-item"'+href+'>'
         +'<div class="week-dot '+dc+'"></div>'
         +'<div style="flex:1;min-width:0">'
@@ -752,7 +709,7 @@ async function loadWeek(){
         +'</div></a>';
     }).join('');
   }catch(e){
-    el.innerHTML='<div class="error-box">Could not load this week.<br><button class="retry-btn" onclick="loadWeek()">↺ Try again</button></div>';
+    el.innerHTML='<div class="error-box">Could not load this week\'s stories.<br><button class="retry-btn" onclick="loadWeek()">↺ Try again</button></div>';
   }
 }
  
@@ -777,14 +734,13 @@ async function loadSunday(){
   document.getElementById('sunday-hl').textContent='This week: '+theme.t;
   try{
     var results=await Promise.allSettled(FSUN.map(fetchRSS));
-    var all=[];
-    results.forEach(function(r){if(r.status==='fulfilled')all=all.concat(r.value);});
+    var all=[];results.forEach(function(r){if(r.status==='fulfilled'&&r.value)all=all.concat(r.value);});
     if(!all.length)throw new Error('empty');
     var seen={};
     all=all.filter(function(a){var k=a.headline.toLowerCase().substring(0,60);if(seen[k])return false;seen[k]=true;return true;});
     all=rankFilter(all).slice(0,8);
     var h='<div class="sunday-read-badge">☕ Theme this week: '+esc(theme.t)+'</div>';
-    h+='<div class="sunday-intro">Every week, Daily Brief curates the most compelling long reads. These stories reward your full attention — settle in with a coffee.</div>';
+    h+='<div class="sunday-intro">Every week, Daily Brief curates the most compelling long reads from the world\'s best publications. Settle in with a coffee — these are the stories worth your time.</div>';
     all.forEach(function(a,i){
       var href=a.link?' href="'+esc(a.link)+'" target="_blank" rel="noopener"':'';
       var fullSum=sh(a.rawDesc||'').replace(/\s+/g,' ').trim();
@@ -808,7 +764,7 @@ function loadAll(){loadSection('world');loadSection('business');loadWeek();loadS
 (function(){
   var stored=sl('db_user',null);
   if(stored&&stored.user){
-    currentUser=stored.user; syncMode=stored.sync||false;
+    currentUser=stored.user;syncMode=stored.sync||false;
     showApp();
     if(syncMode)loadFromSupabase();
     else{loadLocalPrefs();trackDay();loadAll();}
@@ -818,3 +774,4 @@ function loadAll(){loadSection('world');loadSection('business');loadWeek();loadS
 </script>
 </body>
 </html>
+ 
