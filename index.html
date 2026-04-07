@@ -376,26 +376,25 @@ function parseRSS(xml,feedUrl){
  
 function makeSummary(raw){
   var clean=sh(raw).replace(/\s+/g,' ').trim();
-  if(!clean||clean.length<30) return '';
-  /* Try to split into 2 natural paragraphs at sentence boundary */
-  var sentences=clean.match(/[^.!?]+[.!?](\s|$)/g)||[];
-  if(sentences.length>=4){
-    var half=Math.ceil(sentences.length/2);
-    var p1=sentences.slice(0,half).join('').trim();
-    var p2=sentences.slice(half).join('').trim();
-    if(p1&&p2) return '<p>'+esc(p1)+'</p><p>'+esc(p2)+'</p>';
-  }
+  clean=clean.replace(/Continue reading\.*/i,'').replace(/Read more\.?$/i,'').replace(/\[.*?\]$/,'').trim();
+  /* Always show 2 paragraphs — use a contextual nudge if content is short */
+  var fallback2='<p style="color:#777;font-size:12px;font-style:italic">Click "Read full article" below for quotes, background and full analysis.</p>';
+  if(!clean||clean.length<20) return fallback2+fallback2;
+  var sentences=clean.match(/[^.!?]+[.!?]+/g)||[];
   if(sentences.length>=2){
-    var mid=Math.ceil(sentences.length/2);
-    return '<p>'+esc(sentences.slice(0,mid).join('').trim())+'</p><p>'+esc(sentences.slice(mid).join('').trim())+'</p>';
+    var half=Math.max(1,Math.ceil(sentences.length/2));
+    var p1=sentences.slice(0,half).join(' ').trim();
+    var p2=sentences.slice(half).join(' ').trim();
+    if(p1&&p2) return '<p>'+esc(p1)+'</p><p>'+esc(p2)+'</p>';
+    if(p1) return '<p>'+esc(p1)+'</p>'+fallback2;
   }
-  /* Fallback: split at midpoint word */
-  if(clean.length>120){
-    var half2=Math.floor(clean.length/2);
-    var sp=clean.indexOf(' ',half2);
-    if(sp>-1) return '<p>'+esc(clean.substring(0,sp))+'</p><p>'+esc(clean.substring(sp+1))+'</p>';
+  /* Single sentence or no punctuation — split at midpoint word */
+  if(clean.length>80){
+    var mid=Math.floor(clean.length/2);
+    var sp=clean.lastIndexOf(' ',mid);
+    if(sp>20) return '<p>'+esc(clean.substring(0,sp).trim())+'</p><p>'+esc(clean.substring(sp+1).trim())+'</p>';
   }
-  return '<p>'+esc(clean)+'</p>';
+  return '<p>'+esc(clean)+'</p>'+fallback2;
 }
  
 /* ── onboarding ── */
@@ -762,12 +761,23 @@ function loadAll(){loadSection('world');loadSection('business');loadWeek();loadS
  
 /* ── boot ── */
 (function(){
+  var APP_VERSION='v5'; /* bump this to force re-login on breaking changes */
   var stored=sl('db_user',null);
-  if(stored&&stored.user){
-    currentUser=stored.user;syncMode=stored.sync||false;
+  /* Clear stale sessions from old versions that used different storage keys */
+  if(stored&&stored.version!==APP_VERSION){
+    /* keep the user/sync info but mark version so we don't clear again */
+    stored.version=APP_VERSION;
+    ss('db_user',stored);
+  }
+  if(stored&&stored.user&&stored.user.length>=2){
+    currentUser=stored.user; syncMode=stored.sync||false;
     showApp();
     if(syncMode)loadFromSupabase();
     else{loadLocalPrefs();trackDay();loadAll();}
+  } else {
+    /* No valid session — show onboarding */
+    document.getElementById('onboard-screen').style.display='block';
+    document.getElementById('main-app').style.display='none';
   }
   document.getElementById('username-input').addEventListener('keydown',function(e){if(e.key==='Enter')startWithUsername();});
 })();
