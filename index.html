@@ -189,7 +189,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div id="sync-banner" class="sync-banner" style="display:none"></div>
   <div class="nav">
     <button class="ntab on" onclick="gotoTab('world',this)">🌍 World</button>
+    <button class="ntab" onclick="gotoTab('uk',this)">🇬🇧 UK</button>
     <button class="ntab" onclick="gotoTab('business',this)">📈 Business</button>
+    <button class="ntab" onclick="gotoTab('finance',this)">💷 Personal finance</button>
     <button class="ntab" onclick="gotoTab('sunday',this)">☕ Sunday</button>
     <button class="ntab" onclick="gotoTab('week',this)">🗓 This week</button>
     <button class="ntab" onclick="gotoTab('profile',this)">✦ My taste</button>
@@ -215,6 +217,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     <div id="world-feed"><div class="loading-row"><div class="spinner"></div>Loading world news…</div></div>
   </div>
  
+ 
+  <!-- UK -->
+  <div id="uk-panel" class="panel">
+    <div class="section-hero" style="background:#1a0d2e">
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1529180979161-06b8b6d6f2be?w=800&q=70&auto=format&fit=crop" alt="">
+      <div class="hero-scrim"></div>
+      <div class="hero-text">
+        <div class="hero-kicker" style="background:rgba(220,53,69,0.9);color:#fff">UK news</div>
+        <div class="hero-title">Top 10 UK stories</div>
+        <div class="hero-sub">BBC · Guardian · Politics · With 2-paragraph summaries</div>
+      </div>
+    </div>
+    <div class="taste-bar" id="uk-taste-bar" style="display:none">
+      <div class="taste-label">Your taste</div>
+      <div class="taste-tags" id="uk-taste-tags"></div>
+      <div class="taste-count" id="uk-taste-count"></div>
+    </div>
+    <div class="feed-label"><span>Latest stories</span><span class="for-you-badge" id="uk-foryou-badge" style="display:none">Ranked for you</span></div>
+    <div id="uk-feed"><div class="loading-row"><div class="spinner"></div>Loading UK news…</div></div>
+  </div>
+ 
   <!-- BUSINESS -->
   <div id="business-panel" class="panel">
     <div class="section-hero" style="background:#0a1f1a">
@@ -233,6 +256,27 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </div>
     <div class="feed-label"><span>Latest stories</span><span class="for-you-badge" id="business-foryou-badge" style="display:none">Ranked for you</span></div>
     <div id="business-feed"><div class="loading-row"><div class="spinner"></div>Loading business news…</div></div>
+  </div>
+ 
+ 
+  <!-- PERSONAL FINANCE -->
+  <div id="finance-panel" class="panel">
+    <div class="section-hero" style="background:#1a1200">
+      <img class="hero-bg-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=70&auto=format&fit=crop" alt="">
+      <div class="hero-scrim"></div>
+      <div class="hero-text">
+        <div class="hero-kicker" style="background:rgba(212,160,23,0.95);color:#fff">Personal finance</div>
+        <div class="hero-title">Money, savings &amp; cost of living</div>
+        <div class="hero-sub">Guardian · BBC · Which? · With 2-paragraph summaries</div>
+      </div>
+    </div>
+    <div class="taste-bar" id="finance-taste-bar" style="display:none">
+      <div class="taste-label">Your taste</div>
+      <div class="taste-tags" id="finance-taste-tags"></div>
+      <div class="taste-count" id="finance-taste-count"></div>
+    </div>
+    <div class="feed-label"><span>Latest stories</span><span class="for-you-badge" id="finance-foryou-badge" style="display:none">Ranked for you</span></div>
+    <div id="finance-feed"><div class="loading-row"><div class="spinner"></div>Loading personal finance news…</div></div>
   </div>
  
   <!-- SUNDAY -->
@@ -513,7 +557,7 @@ function rankFilter(arts){
 function topKw(n){return Object.entries(taste.keywords||{}).filter(function(e){return e[1]>0;}).sort(function(a,b){return b[1]-a[1];}).slice(0,n).map(function(e){return e[0];});}
 function updateTasteBars(){
   var tops=topKw(6);
-  ['world','business'].forEach(function(sec){
+  ['world','uk','business','finance'].forEach(function(sec){
     var bar=document.getElementById(sec+'-taste-bar');
     var badge=document.getElementById(sec+'-foryou-badge');
     if(!bar)return;
@@ -549,11 +593,13 @@ var FW=['https://feeds.bbci.co.uk/news/uk/rss.xml','https://feeds.bbci.co.uk/new
 var FB=['https://feeds.bbci.co.uk/news/business/rss.xml','https://feeds.bbci.co.uk/news/technology/rss.xml','https://feeds.theguardian.com/theguardian/business/rss','https://feeds.theguardian.com/theguardian/technology/rss'];
 var FWEEK=['https://feeds.bbci.co.uk/news/rss.xml','https://feeds.bbci.co.uk/news/world/rss.xml','https://feeds.theguardian.com/theguardian/uk/rss'];
 var FSUN=['https://feeds.theguardian.com/theguardian/theguardian/rss','https://feeds.bbci.co.uk/news/magazine/rss.xml'];
+var FUK=['https://feeds.bbci.co.uk/news/uk/rss.xml','https://feeds.bbci.co.uk/news/politics/rss.xml','https://feeds.theguardian.com/theguardian/uk/rss','https://feeds.theguardian.com/theguardian/politics/rss'];
+var FFIN=['https://feeds.theguardian.com/theguardian/money/rss','https://feeds.bbci.co.uk/news/business/rss.xml','https://feeds.theguardian.com/theguardian/business/personalfinances/rss','https://feeds.theguardian.com/theguardian/money/property/rss'];
  
 /* ── load section ── */
 async function loadSection(sec){
   var el=document.getElementById(sec+'-feed');
-  var feeds=sec==='business'?FB:FW;
+  var feeds=sec==='business'?FB:sec==='uk'?FUK:sec==='finance'?FFIN:FW;
   try{
     /* fetch all feeds in parallel, keep whatever succeeds */
     var results=await Promise.allSettled(feeds.map(fetchRSS));
@@ -757,7 +803,7 @@ async function loadSunday(){
   }
 }
  
-function loadAll(){loadSection('world');loadSection('business');loadWeek();loadSunday();}
+function loadAll(){loadSection('world');loadSection('uk');loadSection('business');loadSection('finance');loadWeek();loadSunday();}
  
 /* ── boot ── */
 (function(){
